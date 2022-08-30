@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { allProjects } from "../data";
+import { allGrants } from "../data";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
 function HomePage() {
     return (
         <div id="project-list">
-        {allProjects.map((projectData, key) => {
+        {allGrants.map((projectData, key) => {
         return <ProjectCard key={key} projectData={projectData} />;
     })}
     </div>
