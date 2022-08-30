@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { allProjects } from "../data";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
+
+// function to get projects from the API below
 function HomePage() {
     const [projectList, setProjectList] = useState([]);
 
