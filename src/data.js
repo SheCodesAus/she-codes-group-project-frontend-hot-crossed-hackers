@@ -1,4 +1,4 @@
-export const allProjects = [
+export const allGrants = [
     {
     id: 1,
     title: "She Codes - Plus ",
