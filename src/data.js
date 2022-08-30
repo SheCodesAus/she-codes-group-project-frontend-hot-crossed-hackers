@@ -1,4 +1,4 @@
-export const allScholarships = [
+export const allProjects = [
     {
     id: 1,
     title: "She Codes - Plus ",
