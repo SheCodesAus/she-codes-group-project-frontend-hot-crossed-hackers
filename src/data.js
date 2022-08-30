@@ -34,3 +34,29 @@ export const allGrants = [
     ,
 
 ]
+
+export const Stories = [    
+    {
+    id: 1,
+    title: "Melanie Perkins",
+    image: "https://images.successstory.com/img_people/profile/perk-1_1613038877.jpg",
+    
+    }
+    ,
+
+    {
+        id: 1,
+        title: "Melanie Perkins",
+        image: "https://images.successstory.com/img_people/profile/perk-1_1613038877.jpg",
+        
+        }
+    ,
+
+    {
+        id: 1,
+        title: "Melanie Perkins",
+        image: "https://images.successstory.com/img_people/profile/perk-1_1613038877.jpg",
+        
+        }
+
+]

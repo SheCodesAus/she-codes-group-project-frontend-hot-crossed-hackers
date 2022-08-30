@@ -2,3 +2,16 @@
 {
   background-color: lightblue;
 }
+
+#grant-list {
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: 35% 35% 35%;
+  justify-content: center;
+  margin: 40px 190px 60px 190px;
+  row-gap: 20px
+
+
+}
