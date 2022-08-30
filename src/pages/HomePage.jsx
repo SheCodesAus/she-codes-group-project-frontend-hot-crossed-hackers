@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { allProjects } from "../data";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
+import { allGrants } from "../data";
+import GrantCard from "../components/GrantCard/GrantCard";
 
 function HomePage() {
     return (
-        <div id="project-list">
-        {allProjects.map((projectData, key) => {
-        return <ProjectCard key={key} projectData={projectData} />;
+        <div id="grant-list">
+        {allGrants.map((grantData, key) => {
+        return <GrantCard key={key} grantData={grantData} />;
     })}
     </div>
     );
@@ -15,25 +15,25 @@ function HomePage() {
 
 
 
-// function to get projects from the API below
+// function to get grants from the API below
 
 // function HomePage() {
-//     const [projectList, setProjectList] = useState([]);
+//     const [grantList, setgrantList] = useState([]);
 
 //     useEffect(() => {
-//         fetch(`${process.env.REACT_APP_API_URL}projects`)
+//         fetch(`${process.env.REACT_APP_API_URL}grants`)
 //         .then((results) => {
 //         return results.json();
 //         })
 //         .then((data) => {
-//         setProjectList(data);
+//         setgrantList(data);
 //         });
 //         },[]);
 
 //     return (
-//         <div id= "project-list">
-//         {projectList.map((projectData, key) => {
-//         return <ProjectCard key={key} projectData={projectData} />;
+//         <div id= "grant-list">
+//         {grantList.map((grantData, key) => {
+//         return <grantCard key={key} grantData={grantData} />;
 //         })}
 //         </div>
 //     );
