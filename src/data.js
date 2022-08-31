@@ -38,24 +38,24 @@ export const allGrants = [
 export const Stories = [    
     {
     id: 1,
-    title: "Melanie Perkins",
-    image: "https://images.successstory.com/img_people/profile/perk-1_1613038877.jpg",
+    title: "Diego Camargo",
+    image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Diego%20Camargo%20crop.jpg",
     
     }
     ,
 
     {
-        id: 1,
-        title: "Melanie Perkins",
-        image: "https://images.successstory.com/img_people/profile/perk-1_1613038877.jpg",
+        id: 2,
+        title: "Caylee Winpigler",
+        image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Caylee%20Winpigler%20crop.jpg",
         
         }
     ,
 
     {
-        id: 1,
-        title: "Melanie Perkins",
-        image: "https://images.successstory.com/img_people/profile/perk-1_1613038877.jpg",
+        id: 3,
+        title: "Christian Ntienou",
+        image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Christian%20Ntienou.jpg",
         
         }
 
