@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { allGrants } from "../data";
-import { Stories } from "../data";
 import GrantCard from "../components/GrantCard/GrantCard";
-import StoryCard from "../components/StoryCard/StoryCard";
+
 
 function HomePage() {
     return (
@@ -15,16 +14,19 @@ function HomePage() {
 
 }
 
-function StoryList() {
-return (
-    <div id="story-list">
-    {Stories.map((storyData, key) => {
-    return <StoryCard key={key} storyData={storyData} />;
-})}
-</div>
-);
 
-}
+// Trying to recreate the function above
+// function StoryList() {
+// return (
+//     <div id="story-list">
+//     {Stories.map((storyData, key) => {
+//     return <StoryCard key={key} storyData={storyData} />;
+// })}
+// </div>
+// );
+
+// }
+
 
     
 
@@ -55,4 +57,3 @@ return (
 // }
 
 export default HomePage;
-export StoryList;

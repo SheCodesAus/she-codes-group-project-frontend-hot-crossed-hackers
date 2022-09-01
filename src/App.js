@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import GrantsPage from "./pages/GrantsPage";
 import LoginPage from "./pages/LoginPage";
 import "./App.css";
+import StoryList from "./components/Stories/StoryList";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         <Route path="grant/:id" element={<GrantsPage />} />
         <Route path="login" element={<LoginPage />} />
       </Routes>
+      <div>
+        <StoryCard />
+      </div>
     </Router>
   );
 }

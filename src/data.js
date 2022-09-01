@@ -35,7 +35,7 @@ export const allGrants = [
 
 ]
 
-export const Stories = [    
+export const allStories = [    
     {
     id: 1,
     title: "Diego Camargo",
