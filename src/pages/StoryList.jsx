@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { allStories } from "../data";
-import Stories from "../components/Stories/StoryCard";
 
 function StoryList() {
 return (

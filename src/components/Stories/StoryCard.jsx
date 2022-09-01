@@ -1,13 +1,13 @@
 import React from "react";
 import "./StoryCard.css";
-import { Stories } from "../data";
+import { allStories } from "../data";
 
 function StoryCard(props) {
-    const { Stories } = props;
+    const { allStories } = props;
     return(
         <div className="story-card">
-        <img src={Stories.image}/>
-        <h3>{Stories.title}</h3>
+        <img src={allStories.image}/>
+        <h3>{allStories.title}</h3>
         </div>
     );
 }

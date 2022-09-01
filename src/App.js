@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import GrantsPage from "./pages/GrantsPage";
 import LoginPage from "./pages/LoginPage";
 import "./App.css";
-import StoryList from "./components/Stories/StoryList";
+import StoryList from "./pages/StoryList";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="login" element={<LoginPage />} />
       </Routes>
       <div>
-        <StoryCard />
+        <StoryList/>
       </div>
     </Router>
   );
