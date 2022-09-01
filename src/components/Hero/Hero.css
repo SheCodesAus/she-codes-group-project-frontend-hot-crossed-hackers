@@ -1,0 +1,9 @@
+.hero-image {
+    background-blend-mode: multiply;
+    /* background-color: rgba(0,0,0,.6); */
+    background-image: url(https://i.pinimg.com/originals/d6/ea/cd/d6eacd91fbb9dd70e17334109adafa60.jpg);
+    display: flex;
+    height: 25rem;
+    margin: 8px auto;
+    padding-left: 13rem;
+}

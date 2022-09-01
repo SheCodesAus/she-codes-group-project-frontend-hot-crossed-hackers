@@ -1,16 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { allGrants } from "../data";
+import { allStories } from "../data";
 import GrantCard from "../components/GrantCard/GrantCard";
+import StoryCard from "../components/StoryCard/StoryCard";
+import Hero from "../components/Hero/Hero"
+
 
 function HomePage() {
     return (
-        <div id="grant-list">
-        {allGrants.map((grantData, key) => {
-        return <GrantCard key={key} grantData={grantData} />;
-    })}
-    </div>
+
+        <div>
+            <Hero />
+            <div id="grant-list">
+            {allGrants.map((grantData, key) => {
+            return <GrantCard key={key} grantData={grantData} />;
+            })}
+            </div>
+            <div id="story-list">
+            {allStories.map((storyData, key) => {
+            return <StoryCard key={key} storyData={storyData} />;
+            })}
+            </div>
+
+        </div>
     );
+    
 }
+
     
 
 

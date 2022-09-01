@@ -35,5 +35,34 @@ export const allGrants = [
 
 ]
 
+export const allStories = [
+    {
+    id: 1,
+    title: "Diego Camargo",
+    image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Diego%20Camargo%20crop.jpg",
+    
+    }
+    ,
+
+    {
+        id: 2,
+        title: "Caylee Winpigler",
+        image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Julia%20Becker.jpg",
+    }
+    ,
+
+    {
+        id: 3,
+        title: "Christian Ntienou",
+        image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Christian%20Ntienou.jpg",
+    }
+    ,
+
+]
+
+
+
+
+
 
 
