@@ -5,7 +5,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    color: #242222;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -23,7 +22,7 @@ nav ul {
     display: flex;
     gap: 1rem;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
     background-color: #091938;
 }
 

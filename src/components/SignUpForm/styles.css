@@ -12,37 +12,31 @@ p {
     color: rgb(33, 33, 33);
 }
 
+input,
+label {
+    display: block;
+}
+
+
 h2 {
-    font-size: 3.5em;
-    color: #525252;
+    font-size: 1.5em;
+    color: #1a1a1a;
 }
 
-
-.form-box {
-    background: white;
-    width: 800px;
-    height: 500px;
-    margin: 80px auto 0 auto;
-    padding: 0px 0px 40px 0px;
-    border: #f3f9fe 4px solid;
-}
 
 .username {
     background: #ecf0f1;
     border: #ccc 1px solid;
-    border-bottom: #ccc 2px solid;
     padding: 8px;
     width: 250px;
     color: #AAAAAA;
     margin-top: 10px;
     font-size: 1em;
-    border-radius: 4px;
 }
 
 
 .password,
 .email {
-    border-radius: 4px;
     background: #ecf0f1;
     border: #ccc 1px solid;
     padding: 8px;
@@ -52,7 +46,7 @@ h2 {
 
 .btn {
     background: #091938;
-    width: 200px;
+    width: 250px;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;

@@ -50,7 +50,7 @@ const LoginForm = () => {
                 <h2>Please Login In</h2>
             </div>
             <div>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="username" className="user-title">Username</label>
                 <input
                     type="text"
                     id="username"
@@ -60,7 +60,7 @@ const LoginForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password" className="pass-title">Password</label>
                 <input
                     type="password"
                     id="password"

@@ -8,20 +8,24 @@ import GrantPage from "./pages/GrantPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import AccountPage from "./pages/AccountPage";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
   return (
     <Router>
-      <Nav />
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="grant/:id" element={<GrantPage />} />
-        <Route path="grants" element={<GrantsPage />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="signup" element={<SignUpPage />} />
-        <Route path="account" element={<AccountPage />} />
-      </Routes>
+      <div id="App">
+        <Nav />
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="grant/:id" element={<GrantPage />} />
+          <Route path="grants" element={<GrantsPage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="signup" element={<SignUpPage />} />
+          <Route path="account" element={<AccountPage />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }
