@@ -1,27 +1,15 @@
 import React from "react";
-import { allGrants } from "../data";
-import GrantCard from "../components/GrantCard/GrantCard";
+import { oneGrant } from "../data";
+// import GrantCard from "../components/GrantCard/GrantCard";
 
 
 function GrantPage() {
-    return (
-
-        <div>
-
-            <div id="h1-home">
-                <h1>Grant</h1>
-            </div>
-            <div id="grant-list">
-            {allGrants.map((grantData, key) => {
-            return <GrantCard key={key} grantData={grantData} />;
-            })}
-            </div>
-
-        </div>
-    );
-    
+    return(
+    <div>
+    <h2>oneGrant.title</h2>
+    </div>
+    )
 }
-
 export default GrantPage;
 
 // Function to get data from API below
