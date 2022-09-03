@@ -7,22 +7,23 @@ body {
 }
 
 p {
-    font-size: 12px;
+    font-size: 20px;
     text-decoration: none;
-    color: #ffffff;
+    color: rgb(33, 33, 33);
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 3.5em;
     color: #525252;
 }
 
+
 .form-box {
     background: white;
-    width: 500px;
-    height: 300px;
-    margin: 60px auto 0 auto;
-    padding: 40px 0px 40px 0px;
+    width: 800px;
+    height: 500px;
+    margin: 80px auto 0 auto;
+    padding: 0px 0px 40px 0px;
     border: #f3f9fe 4px solid;
 }
 
@@ -32,23 +33,26 @@ h2 {
     border-bottom: #ccc 2px solid;
     padding: 8px;
     width: 250px;
-    color: #2d2d2d;
+    color: #AAAAAA;
     margin-top: 10px;
     font-size: 1em;
+    border-radius: 4px;
 }
 
-.password {
+
+.password,
+.email {
+    border-radius: 4px;
     background: #ecf0f1;
     border: #ccc 1px solid;
     padding: 8px;
     width: 251px;
     font-size: 1em;
-    color: #2d2d2d;
 }
 
 .btn {
     background: #091938;
-    width: 125px;
+    width: 200px;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
