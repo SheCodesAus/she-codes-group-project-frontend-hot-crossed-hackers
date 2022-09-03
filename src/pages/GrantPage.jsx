@@ -8,7 +8,7 @@ function GrantPage() {
     return (
 
         <div>
-            <div id="grant-list">
+            <div>
                 <GrantDetails key="1" grantData={allGrants[id]} />
         
             </div>

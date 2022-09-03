@@ -1,9 +1,24 @@
-.details-data {
-    width: 100%;
-    }
 
-    .details-data img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.details-container {
+    width: 1300px;
+    padding: 50px;
+    padding-top:0%;
+    margin: 5%;
+    margin-top: 5%;
+    position:static;
+}
+
+.details-data {
+    font-size: 50px
+
+}
+
+h3{ 
+    font-size: 50px
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
     }
