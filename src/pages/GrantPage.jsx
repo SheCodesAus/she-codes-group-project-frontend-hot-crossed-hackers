@@ -1,20 +1,15 @@
 import React from "react";
 import { allGrants } from "../data";
-import { allStories } from "../data";
-import { allPartners } from "../data";
 import GrantCard from "../components/GrantCard/GrantCard";
-import StoryCard from "../components/StoryCard/StoryCard";
-import PartnerCard from "../components/PartnerCard/PartnerCard";
-import Hero from "../components/Hero/Hero"
 
 
-function HomePage() {
+function GrantPage() {
     return (
 
         <div>
-            <Hero />
+
             <div id="h1-home">
-                <h1>Featured Grants</h1>
+                <h1>Grant</h1>
             </div>
             <div id="grant-list">
             {allGrants.map((grantData, key) => {
@@ -22,13 +17,12 @@ function HomePage() {
             })}
             </div>
 
-
-
         </div>
     );
     
 }
 
+export default GrantPage;
 
 // Function to get data from API below
 // import React, { useEffect } from "react";
