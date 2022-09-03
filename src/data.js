@@ -1,6 +1,6 @@
 export const allGrants = [
     {
-    id: 1,
+    id: 0,
     title: "She Codes - Plus ",
     organisation: "She Codes Australia",
     image: "https://pbs.twimg.com/media/FVNpAhmagAAXkic?format=jpg&name=large",
@@ -12,7 +12,7 @@ export const allGrants = [
     ,
 
     {
-    id: 2,
+    id: 1,
     title: "Technical Entry Pathways",
     organisation: "BHP",
     image: "https://www.smartcompany.com.au/wp-content/uploads/2022/01/BHP-768x485-1.jpg",
@@ -23,7 +23,7 @@ export const allGrants = [
     ,
 
     {
-    id: 3,
+    id: 2,
     title: "Diversity In Tech Scholarship",
     organisation: "Coder Academy.",
     image: "https://www.informationplanet.com/sites/default/files/styles/infoplanet_original/public/externals/cf28a79ccf6a3e8b0cb9ab29117ad8ef.jpg",
@@ -35,8 +35,7 @@ export const allGrants = [
 
 ]
 
-export const oneGrant = [
-    {
+export const oneGrant = {
     id: 1,
     title: "She Codes - Plus ",
     organisation: "She Codes Australia",
@@ -45,9 +44,9 @@ export const oneGrant = [
     url: "https://shecodes.com.au/program/plus/",
     closing_date: "2022-11-20T14:22:23.382748Z",
     
-    },
+    }
     
-]
+
 
 export const allStories = [
     {
