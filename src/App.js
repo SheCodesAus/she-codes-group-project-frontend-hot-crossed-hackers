@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import GrantsPage from "./pages/GrantsPage";
 import GrantPage from "./pages/GrantPage";
 import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
+import AccountPage from "./pages/AccountPage";
 import "./App.css";
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="grant/:id" element={<GrantPage />} />
         <Route path="grants" element={<GrantsPage />} />
         <Route path="login" element={<LoginPage />} />
+        <Route path="signup" element={<SignUpPage />} />
+        <Route path="account" element={<AccountPage />} />
       </Routes>
     </Router>
   );
