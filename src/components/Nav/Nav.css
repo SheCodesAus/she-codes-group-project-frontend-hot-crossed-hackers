@@ -6,10 +6,8 @@ nav {
     justify-content: space-between;
     align-items: stretch;
     color: #242222;
-    font-size: 80;
     text-decoration: none;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 2rem;
     padding: .5rem 8rem;
@@ -49,7 +47,6 @@ nav a {
 .nav li:hover {
     background-color: #1c4025;
 }
-
 
 .li {
     position: relative;
