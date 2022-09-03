@@ -4,6 +4,7 @@
   grid-template-columns: 30% 30% 30%;
   column-gap: 10px;
   row-gap: 10px;
+  justify-content: center;
 }
 
 #story-list {
@@ -12,8 +13,7 @@
   grid-template-columns: 30% 30% 30%;
   column-gap: 10px;
   row-gap: 10px;
-
-
+  justify-content: center;
 }
 
 #partner-list {
@@ -22,8 +22,7 @@
   grid-template-columns: 30% 30% 30%;
   column-gap: 10px;
   row-gap: 10px;
-
-
+  justify-content: center;
 }
 
 #h1-home {
