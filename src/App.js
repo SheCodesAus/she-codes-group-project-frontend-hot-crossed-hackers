@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from
 import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import GrantsPage from "./pages/GrantsPage";
+import GrantPage from "./pages/GrantPage";
 import LoginPage from "./pages/LoginPage";
 import "./App.css";
 
@@ -13,7 +14,8 @@ function App() {
       <Nav />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="grant/:id" element={<GrantsPage />} />
+        <Route path="grant/:id" element={<GrantPage />} />
+        <Route path="grants" element={<GrantsPage />} />
         <Route path="login" element={<LoginPage />} />
       </Routes>
     </Router>
