@@ -34,3 +34,59 @@ export const allGrants = [
     ,
 
 ]
+
+export const allStories = [
+    {
+    id: 1,
+    title: "Diego Camargo",
+    image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Diego%20Camargo%20crop.jpg",
+    
+    }
+    ,
+
+    {
+        id: 2,
+        title: "Caylee Winpigler",
+        image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Julia%20Becker.jpg",
+    }
+    ,
+
+    {
+        id: 3,
+        title: "Christian Ntienou",
+        image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Christian%20Ntienou.jpg",
+    }
+    ,
+
+]
+
+export const allPartners = [
+    {
+    id: 1,
+    title: "Microsoft Corporation	",
+    image: "https://i.pinimg.com/474x/1c/86/95/1c86953b1e0eec8233bffa2b3f4af145--microsoft-corporate.jpg",
+    
+    }
+    ,
+
+    {
+        id: 2,
+        title: "Intel",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwdjq0A-1IsXIBZ7MwfPSdzggnOFfa9cJBiSkxOUFMJ0PblHGELsuDjKmDbOLM77SqqLw&usqp=CAU",
+    }
+    ,
+
+    {
+        id: 3,
+        title: "Envato",
+        image: "https://media-exp1.licdn.com/dms/image/C4D0BAQG-IC5PjQuuhQ/company-logo_200_200/0/1656622248978?e=2147483647&v=beta&t=HlMaxNPnTQ2vf68r3GA69IRAYZLTSEzEpTxvopfqe5Y",
+    }
+    ,
+
+]
+
+
+
+
+
+
