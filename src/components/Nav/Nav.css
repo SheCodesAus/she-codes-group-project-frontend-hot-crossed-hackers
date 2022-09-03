@@ -5,6 +5,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    color: #242222;
+    font-size: 80;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
     padding: .5rem 8rem;
