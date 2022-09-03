@@ -2,12 +2,14 @@ import React from "react";
 import { allGrants } from "../data";
 import GrantCard from "../components/GrantCard/GrantCard";
 
-function GrantsPage() {
+
+function GrantPage() {
     return (
 
         <div>
+
             <div id="h1-home">
-                <h1>Grants</h1>
+                <h1>Grant</h1>
             </div>
             <div id="grant-list">
             {allGrants.map((grantData, key) => {
@@ -20,13 +22,11 @@ function GrantsPage() {
     
 }
 
-export default GrantsPage;
+export default GrantPage;
 
-
-
+// Function to get data from API below
 // import React, { useEffect } from "react";
 // import { useParams } from "react-router-dom";
-
 
 // function GrantPage() {
 

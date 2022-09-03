@@ -1,18 +1,13 @@
 nav {
-<<<<<<< HEAD
-    color: #242222;
-    font-size: 80;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-=======
     color: #ffffff;
     background-color: #091938;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
->>>>>>> develop
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
     padding: .5rem 8rem;
@@ -29,14 +24,19 @@ nav ul {
     gap: 1rem;
     font-size: 18px;
     font-weight: 500;
+    background-color: #091938;
 }
 
 .nav.titles {
     font-size: 40;
+    color: #ffffff;
+
 }
 
 nav a {
     color: inherit;
+    color: #ffffff;
+    background-color: #091938;
     text-decoration: none;
     height: 100%;
     display: flex;
@@ -55,25 +55,9 @@ nav a {
     flex-grow: 0;
 }
 
-<<<<<<< HEAD
-.logo {
-    height: 160px;
-    justify-content: left;
-    font-weight: 600;
-}
-
-.loginbtn {
-    border-radius: 1px color 0000;
-=======
-/* .logo {
-    height: 60px;
-    justify-content: left;
-    font-weight: 600;
-} */
-
 img {
+    background-color: #091938;
     width: 60%;
     height: 80%;
     object-fit: scale-down;
->>>>>>> develop
 }
