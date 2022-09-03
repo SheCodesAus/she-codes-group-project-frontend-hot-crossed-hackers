@@ -1,10 +1,10 @@
 nav {
     color: #242222;
-    font-size: 40;
+    font-size: 80;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     gap: 2rem;
     padding: 2rem 8rem;
     /* transition: color 0.2s; */
@@ -36,7 +36,11 @@ nav a {
 }
 
 .logo {
-    height: 60px;
+    height: 160px;
     justify-content: left;
     font-weight: 600;
+}
+
+.loginbtn {
+    border-radius: 1px color 0000;
 }
