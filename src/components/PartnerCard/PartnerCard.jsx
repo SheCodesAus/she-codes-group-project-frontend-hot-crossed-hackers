@@ -7,7 +7,7 @@ function PartnerCard(props) {
     return(
         <div className="partner-card">
         <Link to={`/partner/${partnerData.id}`}>
-        <img src={partnerData.image}/>
+        <img src={partnerData.image} alt="partner"/>
         <h3>{partnerData.title}</h3>
         </Link>
         </div>

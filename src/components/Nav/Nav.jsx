@@ -6,7 +6,7 @@ function Nav() {
     return (
         <nav>
             <div>
-                <Link to="/"><div className="logo" /> <img src={require('./logo.png')} /></Link>
+                <Link to="/"><div className="logo" /> <img src={require('./logo.png')} alt="logo" /></Link>
             </div>
             <ul className="nav.titles">
                 <li>

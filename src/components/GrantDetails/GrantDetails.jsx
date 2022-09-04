@@ -7,9 +7,9 @@ function GrantDetails(props) {
     return(
         <div className="details-container">
         <Link to={`/grant/${grantData.id}`}>
-        <img src={grantData.image}/>
+        <img src={grantData.image} alt="grant"/>
         <div className="details-data">
-        <h3>{grantData.title}</h3>
+        <h1>{grantData.title}</h1>
         <h2>Organisation: {grantData.organisation}</h2>
         <h2>Description: {grantData.description}</h2>
         <h2>More information at: {grantData.url}</h2>

@@ -7,7 +7,7 @@ function StoryCard(props) {
     return(
         <div className="story-card">
         <Link to={`/story/${storyData.id}`}>
-        <img src={storyData.image}/>
+        <img src={storyData.image} alt="person"/>
         <h3>{storyData.title}</h3>
         </Link>
         </div>

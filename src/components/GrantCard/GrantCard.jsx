@@ -6,7 +6,7 @@ function GrantCard(props) {
     return(
         <div className="grant-card">
         <Link to={`/grant/${grantData.id}`}>
-        <img src={grantData.image}/>
+        <img src={grantData.image} alt="grant"/>
         <h3>{grantData.title}</h3>
         </Link>
         </div>
