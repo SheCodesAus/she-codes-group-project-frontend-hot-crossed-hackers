@@ -3,32 +3,29 @@
 import GrantCard from "../components/GrantCard/GrantCard";
 import React, { useState, useEffect } from "react";
 
-
-
-function GrantPage() {
+function GrantsPage() {
     const [grantList, setGrantList] = useState([]);
+        useEffect(() => {
+            fetch(`${process.env.REACT_APP_API_URL}scholarships`)
+            .then((results) => {
+            return results.json();
+            })
+            .then((data) => {
+            setGrantList(data);
+            });
+            },[]);
 
-    useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}grants`)
-        .then((results) => {
-        return results.json();
-        })
-        .then((data) => {
-        setGrantList(data);
-        });
-        },[]);
-
-    return (
-        <div>
-            <div id= "grant-list">
-            {grantList.map((grantData, key) => {
-            return <GrantCard key={key} grantData={grantData} />;
-            })}
+        return (
+            <div>
+                <div id= "grant-list">
+                {grantList.map((grantData, key) => {
+                return <GrantCard key={key} grantData={grantData} />;
+                })}
+                </div>
             </div>
-        </div>
-    );
+        );
 }
-export default GrantPage;
+export default GrantsPage;
 
 // use the function below to test dummy data
 // function GrantsPage() {

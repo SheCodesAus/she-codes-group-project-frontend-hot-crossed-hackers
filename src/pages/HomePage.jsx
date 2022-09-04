@@ -9,11 +9,9 @@ import Hero from "../components/Hero/Hero"
 
 
 function HomePage() {
-
     const [grantList, setGrantList] = useState([]);
-
         useEffect(() => {
-            fetch(`${process.env.REACT_APP_API_URL}grants`)
+            fetch(`${process.env.REACT_APP_API_URL}scholarships`)
             .then((results) => {
             return results.json();
             })
