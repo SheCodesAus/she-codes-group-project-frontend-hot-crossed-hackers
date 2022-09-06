@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { allGrants } from "../data"; 
 // use code above for dummy data
 import GrantCard from "../components/GrantCard/GrantCard";
