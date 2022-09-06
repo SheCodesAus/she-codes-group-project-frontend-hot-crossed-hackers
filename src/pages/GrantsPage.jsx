@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 function GrantsPage() {
     const [grantList, setGrantList] = useState([]);
         useEffect(() => {
-            fetch(`${process.env.REACT_APP_API_URL}scholarships`)
+            fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
             .then((results) => {
             return results.json();
             })
