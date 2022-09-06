@@ -8,12 +8,19 @@ function GrantsPage() {
         useEffect(() => {
             fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
             .then((results) => {
+                console.log(results);
             return results.json();
             })
             .then((data) => {
             setGrantList(data);
             });
             },[]);
+
+
+
+
+
+            
 
         return (
             <div>

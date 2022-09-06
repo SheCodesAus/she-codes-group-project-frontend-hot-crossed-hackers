@@ -1,24 +1,24 @@
-import React from "react";
-import { allGrants } from "../data";
-import GrantDetails from "../components/GrantDetails/GrantDetails";
-import { useParams} from 'react-router-dom'
+// import React from "react";
+// import { allGrants } from "../data";
+// import GrantDetails from "../components/GrantDetails/GrantDetails";
+// import { useParams} from 'react-router-dom'
 
-function GrantPage() {
-    const { id } = useParams();
-    return (
+// function GrantPage() {
+//     const { id } = useParams();
+//     return (
 
-        <div>
-            <div>
-                <GrantDetails key="1" grantData={allGrants[id]} />
+//         <div>
+//             <div>
+//                 <GrantDetails key="1" grantData={allGrants[id]} />
         
-            </div>
+//             </div>
 
-        </div>
-    );
+//         </div>
+//     );
     
-}
+// }
 
-export default GrantPage;
+// export default GrantPage;
 
 // important {allGrants[id]} is going to be replaced with fetch request
 
@@ -40,22 +40,21 @@ export default GrantPage;
 // export default GrantPage;
 
 // Function to get data from API below
-// import React, { useEffect } from "react";
-// import { useParams } from "react-router-dom";
-// import { oneGrant } from "../data";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-// function GrantPage() {
+function GrantPage(props) {
 
-//     const { id } = useParams();
+    const { id } = useParams();
 
 //     useEffect(() => {
 //         fetch(`${process.oneGrant}grant/${id}`)
 //             .then((results) => {
 //                 return results.json();
 //             })
-//             // .then((data) => {
-//             //     setGrantData(data);
-//             // });
+//             .then((data) => {
+//                 setGrantData(data);
+//             });
 //     }, []);
-// }
-// export default GrantPage;
+}
+export default GrantPage;

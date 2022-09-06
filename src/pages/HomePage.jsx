@@ -11,14 +11,18 @@ import Hero from "../components/Hero/Hero"
 function HomePage() {
     const [grantList, setGrantList] = useState([]);
         useEffect(() => {
-            fetch(`${process.env.REACT_APP_API_URL}scholarships`)
-            .then((results) => {
-            return results.json();
-            })
-            .then((data) => {
-            setGrantList(data);
+            fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
+                .then((results) => {
+                    return results.json();
+                })
+                .then((data) => {
+                    // const shortenedGrantList = data.map((grant, index) => {
+                    //     if (index >2) return;
+                    // })
+                    // console.log(shortenGrantList);
+                    setGrantList(data);
             });
-            },[]);
+        },[]);
 
         return (
             <div>
@@ -27,8 +31,9 @@ function HomePage() {
                     <h1>Featured Grants</h1>
                 </div>
                 <div id= "grant-list">
-                {grantList.map((grantData, key) => {
-                return <GrantCard key={key} grantData={grantData} />;
+                {grantList.map((grantData, index) => {
+                    if (index > 2) return null;
+                return <GrantCard key={index} grantData={grantData} />;
                 })}
                 </div>
                 {/* use function below to test dummy data */}
