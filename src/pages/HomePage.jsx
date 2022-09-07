@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { allGrants } from "../data";
-// use function above  to test dummy data
+// import { allGrants } from "../data"; use this to test dummy data
 import { allStories } from "../data";
 import { allPartners } from "../data";
 import GrantCard from "../components/GrantCard/GrantCard";
@@ -10,18 +9,20 @@ import Hero from "../components/Hero/Hero"
 
 
 function HomePage() {
-
-    // const [grantList, setGrantList] = useState([]);
-
-    //     useEffect(() => {
-    //         fetch(`${process.env.REACT_APP_API_URL}grants`)
-    //         .then((results) => {
-    //         return results.json();
-    //         })
-    //         .then((data) => {
-    //         setGrantList(data);
-    //         });
-    //         },[]);
+    const [grantList, setGrantList] = useState([]);
+        useEffect(() => {
+            fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
+                .then((results) => {
+                    return results.json();
+                })
+                .then((data) => {
+                    // const shortenedGrantList = data.map((grant, index) => {
+                    //     if (index >2) return;
+                    // })
+                    // console.log(shortenGrantList);
+                    setGrantList(data);
+            });
+        },[]);
 
         return (
             <div>
@@ -29,17 +30,18 @@ function HomePage() {
                 <div id="h1-home">
                     <h1>Featured Grants</h1>
                 </div>
-                {/* <div id= "grant-list">
-                {grantList.map((grantData, key) => {
-                return <GrantCard key={key} grantData={grantData} />;
+                <div id= "grant-list">
+                {grantList.map((grantData, index) => {
+                    if (index > 2) return null;
+                return <GrantCard key={index} grantData={grantData} />;
                 })}
-                </div> */}
+                </div>
                 {/* use function below to test dummy data */}
-                <div id="grant-list">
+                {/* <div id="grant-list">
                     {allGrants.map((grantData, key) => {
                         return <GrantCard key={key} grantData={grantData} />;
-                    })}
-                </div>
+                    })}}
+                </div> */}
                 {/* use function above to test dummy data */}
                 <div id="h1-home">
                     <h1>Success Stories</h1>
