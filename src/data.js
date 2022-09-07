@@ -85,6 +85,19 @@ export const allPartners = [
         image: "https://media-exp1.licdn.com/dms/image/C4D0BAQG-IC5PjQuuhQ/company-logo_200_200/0/1656622248978?e=2147483647&v=beta&t=HlMaxNPnTQ2vf68r3GA69IRAYZLTSEzEpTxvopfqe5Y",
     }
     ,
+    {
+        id: 4,
+        title: "Telstra",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyVcpcqowZnW6-VgOhRDQ_VQxQbJ-KLD2Si9CmjizcMj-A-5D8l8A8q4PkuqrXYL1zIVA&usqp=CAU",
+
+    }
+    ,
+    {
+        id: 4,
+        title: "Vodafone",
+        image: "https://is4-ssl.mzstatic.com/image/thumb/Purple114/v4/0b/d4/72/0bd472a1-3f32-2cbf-e5f9-64c16c01f1c7/source/512x512bb.jpg",
+
+    }
 
 ]
 
