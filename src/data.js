@@ -35,25 +35,13 @@ export const allGrants = [
 
 ]
 
-export const oneGrant = {
-    id: 1,
-    title: "She Codes - Plus ",
-    organisation: "She Codes Australia",
-    image: "https://pbs.twimg.com/media/FVNpAhmagAAXkic?format=jpg&name=large",
-    description: "She Codes Plus is our six month program that is designed to supercharge the tech career of its participants, ideal for women looking to enter, or advance in, the tech industry.Plus runs on a part-time basis, outside of business hours, making it perfect for full-time workers, and women returning to the workforce.",
-    url: "https://shecodes.com.au/program/plus/",
-    closing_date: "2022-11-20T14:22:23.382748Z",
-    
-    }
-    
-
 
 export const allStories = [
     {
     id: 1,
     title: "Diego Camargo",
     image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Diego%20Camargo%20crop.jpg",
-    
+    story: ""
     }
     ,
 
