@@ -6,16 +6,19 @@
     margin: 5%;
     margin-top: 5%;
     position:static;
-    font-size: 20px;
 }
 
-.details-data {
-    font-size: 20px;
+.details-container {
+    font-size: 10px;
+    color: black;
+    text-align: left;
 }
 
-h3{ 
-    font-size: 0px;
+#main-title {
+    font-size: 40px;
+    font-weight: bold;
 }
+
 
 
 img {
