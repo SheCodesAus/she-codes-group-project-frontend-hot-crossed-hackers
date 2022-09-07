@@ -6,19 +6,25 @@
     margin: 5%;
     margin-top: 5%;
     position:static;
-    font-size: 20px;
 }
 
-.details-data {
-    font-size: 20px;
+.details-container {
+    font-size: 25px;
+    color: black;
+    text-align: left;
+    line-height: 30px;
 }
 
-h3{ 
-    font-size: 0px;
+#main-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
 }
-
 
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     }

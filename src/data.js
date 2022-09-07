@@ -35,39 +35,29 @@ export const allGrants = [
 
 ]
 
-export const oneGrant = {
-    id: 1,
-    title: "She Codes - Plus ",
-    organisation: "She Codes Australia",
-    image: "https://pbs.twimg.com/media/FVNpAhmagAAXkic?format=jpg&name=large",
-    description: "She Codes Plus is our six month program that is designed to supercharge the tech career of its participants, ideal for women looking to enter, or advance in, the tech industry.Plus runs on a part-time basis, outside of business hours, making it perfect for full-time workers, and women returning to the workforce.",
-    url: "https://shecodes.com.au/program/plus/",
-    closing_date: "2022-11-20T14:22:23.382748Z",
-    
-    }
-    
-
 
 export const allStories = [
     {
     id: 1,
     title: "Diego Camargo",
-    image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Diego%20Camargo%20crop.jpg",
-    
+    image: "https://image.shutterstock.com/mosaic_250/287881/1768126784/stock-photo-young-handsome-man-with-beard-wearing-casual-sweater-and-glasses-over-blue-background-happy-face-1768126784.jpg",
+    story: "Without the scholarship support, I wouldn't have been able to complete and afford my degree",
     }
     ,
 
     {
         id: 2,
         title: "Caylee Winpigler",
-        image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Julia%20Becker.jpg",
+        image: "https://image.shutterstock.com/mosaic_250/2797510/1617540484/stock-photo-closeup-photo-of-amazing-short-hairdo-lady-looking-up-empty-space-deep-thinking-creative-person-arm-1617540484.jpg",
+        story: "I was able to attend my dream school and pursue my passions thanks to the scholarship I received ",
     }
     ,
 
     {
         id: 3,
         title: "Christian Ntienou",
-        image: "https://www.frederickcountygives.org/Portals/0/Uploads/Images/Impact-Initiatives/Christian%20Ntienou.jpg",
+        image: "https://media.istockphoto.com/photos/smiling-indian-guy-with-laptop-computer-working-or-studying-online-on-picture-id1241341642?k=20&m=1241341642&s=612x612&w=0&h=2dObYeku-poraPiv_dLZmXcDtH_IH_C9mm6irRpl52g=",
+        story: "My goals were supported with a scholarship that made it possible for me to finish my master and land the job I always wanted,"
     }
     ,
 
