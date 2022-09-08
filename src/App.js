@@ -11,6 +11,7 @@ import SignUpPage from "./pages/SignUpPage";
 import AccountPage from "./pages/AccountPage";
 import "./App.css";
 
+
 function App() {
   return (
     <Router>
