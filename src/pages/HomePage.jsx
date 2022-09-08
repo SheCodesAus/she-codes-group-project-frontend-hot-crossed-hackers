@@ -60,6 +60,7 @@ function HomePage() {
                         return <PartnerCard key={key} partnerData={partnerData} />;
                     })}
                 </div>
+                
             </div>
     );
 
