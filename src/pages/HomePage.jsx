@@ -25,7 +25,7 @@ function HomePage() {
         },[]);
 
         return (
-            <div>
+            <div class="main-background">
                 <Hero />
                 <div id="h1-home">
                     <h1>Featured Grants</h1>

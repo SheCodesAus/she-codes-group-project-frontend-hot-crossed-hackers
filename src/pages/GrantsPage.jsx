@@ -23,7 +23,7 @@ function GrantsPage() {
             
 
         return (
-            <div>
+            <div class="main-background">
                 <div id= "grant-list">
                 {grantList.map((grantData, key) => {
                 return <GrantCard key={key} grantData={grantData} />;
