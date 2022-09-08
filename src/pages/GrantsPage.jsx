@@ -1,47 +1,50 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import GrantDetails from "../components/GrantDetails/GrantDetails";
+// import { useParams } from "react-router-dom"; use this to test dummy data
+// import { allGrants } from "../data"; use this to test dummy data
+import GrantCard from "../components/GrantCard/GrantCard";
+import React, { useState, useEffect } from "react";
 
-function GrantPage() {
-    const { id } = useParams();
-    const [grantData, setGrantData] = useState({})
-    
-    useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}scholarships/${id}`)
+function GrantsPage() {
+    const [grantList, setGrantList] = useState([]);
+        useEffect(() => {
+            fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
             .then((results) => {
-                return results.json();
+                console.log(results);
+            return results.json();
             })
             .then((data) => {
-                setGrantData(data);
+            setGrantList(data);
             });
-    }, []);
+            },[]);
 
-    return (
-        <GrantDetails grantData={grantData}/>
-    )
+
+        return (
+            <div class="main-background">
+                <div id= "grant-list">
+                {grantList.map((grantData, key) => {
+                return <GrantCard key={key} grantData={grantData} />;
+                })}
+                </div>
+            </div>
+        );
 }
-export default GrantPage;
+export default GrantsPage;
 
-
-// Function to test dummy data below
-// import React from "react";
-// import { allGrants } from "../data";
-// import GrantDetails from "../components/GrantDetails/GrantDetails";
-// import { useParams} from 'react-router-dom'
-
-// function GrantPage() {
-//     const { id } = useParams();
+// use the function below to test dummy data
+// function GrantsPage() {
 //     return (
 
 //         <div>
-//             <div>
-//                 <GrantDetails key="1" grantData={allGrants[id]} />
-        
+//             <div id="h1-home">
+//                 <h1>Grants</h1>
+//             </div>
+//             <div id="grant-list">
+//             {allGrants.map((grantData, key) => {
+//             return <GrantCard key={key} grantData={grantData} />;
+//             })}
 //             </div>
 
 //         </div>
 //     );
     
 // }
-
-// export default GrantPage;
+// export default GrantsPage;
