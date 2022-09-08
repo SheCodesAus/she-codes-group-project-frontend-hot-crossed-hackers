@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from
   "react-router-dom";
 import Nav from "./components/Nav/Nav";
+import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage";
 import GrantsPage from "./pages/GrantsPage";
 import GrantPage from "./pages/GrantPage";
@@ -9,6 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import AccountPage from "./pages/AccountPage";
 import "./App.css";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <Route path="signup" element={<SignUpPage />} />
         <Route path="account" element={<AccountPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

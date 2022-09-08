@@ -66,9 +66,9 @@ export const allStories = [
 export const allPartners = [
     {
     id: 1,
-    title: "Microsoft Corporation	",
+    title: "Microsoft",
     image: "https://i.pinimg.com/474x/1c/86/95/1c86953b1e0eec8233bffa2b3f4af145--microsoft-corporate.jpg",
-    
+    url: "https://www.microsoft.com/en-au/store/b/sale?&ef_id=Cj0KCQjwguGYBhDRARIsAHgRm486DsBotSE1s9ZRSeHkEWf6g8EoDoF4EQCx2FZ30xmv40FF-SgmjyQaAil3EALw_wcB:G:s&s_kwcid=AL!4249!3!507931639607!e!!g!!microsoft&ef_id=Cj0KCQjwguGYBhDRARIsAHgRm486DsBotSE1s9ZRSeHkEWf6g8EoDoF4EQCx2FZ30xmv40FF-SgmjyQaAil3EALw_wcB:G:s&OCID=AIDcmmgj973arw_SEM_Cj0KCQjwguGYBhDRARIsAHgRm486DsBotSE1s9ZRSeHkEWf6g8EoDoF4EQCx2FZ30xmv40FF-SgmjyQaAil3EALw_wcB:G:s&gclid=Cj0KCQjwguGYBhDRARIsAHgRm486DsBotSE1s9ZRSeHkEWf6g8EoDoF4EQCx2FZ30xmv40FF-SgmjyQaAil3EALw_wcB",
     }
     ,
 
@@ -76,6 +76,7 @@ export const allPartners = [
         id: 2,
         title: "Intel",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwdjq0A-1IsXIBZ7MwfPSdzggnOFfa9cJBiSkxOUFMJ0PblHGELsuDjKmDbOLM77SqqLw&usqp=CAU",
+        url:"https://www.intel.com.au/content/www/au/en/homepage.html",
     }
     ,
 
@@ -83,8 +84,24 @@ export const allPartners = [
         id: 3,
         title: "Envato",
         image: "https://media-exp1.licdn.com/dms/image/C4D0BAQG-IC5PjQuuhQ/company-logo_200_200/0/1656622248978?e=2147483647&v=beta&t=HlMaxNPnTQ2vf68r3GA69IRAYZLTSEzEpTxvopfqe5Y",
+        url: "https://elements.envato.com/?adposition=&gclid=Cj0KCQjwguGYBhDRARIsAHgRm48bI4rPSWGYM5oterIu_1QFu7NCGprPrSnwTI1fO051KehHQDG6ZlwaAqW4EALw_wcB",
     }
     ,
+    {
+        id: 4,
+        title: "Amazon",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6g_BzCpqhJnSxm6-BQcetgzjVqx1UCoPzKVlN3jL_F1ma3EiD0vIHLyFbHG5Z76cADVA&usqp=CAU",
+        url: "https://www.amazon.com/",
+
+    }
+    ,
+    {
+        id: 4,
+        title: "A&G",
+        image: "https://media.glassdoor.com/sqll/658336/auto-and-general-insurance-squarelogo-1577962665202.png",
+        url: "https://www.autogeneral.com.au/",
+
+    }
 
 ]
 
