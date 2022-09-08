@@ -17,11 +17,6 @@ function GrantsPage() {
             },[]);
 
 
-
-
-
-            
-
         return (
             <div class="main-background">
                 <div id= "grant-list">
