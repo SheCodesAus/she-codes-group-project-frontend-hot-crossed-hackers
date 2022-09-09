@@ -21,6 +21,7 @@ const LoginForm = () => {
 
 
     const postData = async () => {
+        console.log(JSON.stringify(credentials))
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}api-token-auth/`, {
             method: "post",
@@ -38,7 +39,7 @@ const LoginForm = () => {
         if (credentials.username && credentials.password) {
             postData().then((response) => {
                 window.localStorage.setItem('token', response.token);
-                navigate("/");
+                navigate("/grants");
             });
         }
     };
@@ -47,10 +48,10 @@ const LoginForm = () => {
     return (
         <form className="form-box">
             <div>
-                <h2>Please Login In</h2>
+                <h2>Please log in</h2>
             </div>
             <div>
-                <label htmlFor="username" className="user-title">Username</label>
+                <label htmlFor="username">Username:</label>
                 <input
                     type="text"
                     id="username"
@@ -60,7 +61,7 @@ const LoginForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="password" className="pass-title">Password</label>
+                <label htmlFor="password">Password:</label>
                 <input
                     type="password"
                     id="password"
@@ -70,7 +71,7 @@ const LoginForm = () => {
                 />
             </div>
             <button type="submit" className="btn" onClick={handleSubmit}>
-                Log in
+                Login
             </button>
         </form>
     );
