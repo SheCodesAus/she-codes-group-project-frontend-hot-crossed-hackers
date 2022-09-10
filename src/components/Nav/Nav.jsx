@@ -67,11 +67,6 @@ function Nav() {
                         <Link className="button" to="/Account">Account</Link>)
                         : (<Link className="button" to="/Signup">Sign up</Link>)}
                 </div>
-                <div className="hamburger-menu" onClick={handleClick}>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                </div>
             </nav>
         );
     }
