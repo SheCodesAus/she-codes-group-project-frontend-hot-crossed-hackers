@@ -1,34 +1,33 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'
-import "./styles.css";
+import "./SignUpForm.css";
 
 
 
-const LoginForm = () => {
+const SignUpForm = () => {
     const navigate = useNavigate()
-    const [credentials, setCredentials] = useState({
+    const [newcredentials, setNewCredentials] = useState({
         username: "",
+        email: "",
         password: "",
     });
 
     const handleChange = (event) => {
         const { id, value } = event.target;
-        setCredentials((prevCredentials) => ({
+        setNewCredentials((prevCredentials) => ({
             ...prevCredentials,
             [id]: value,
         }));
     };
 
-
     const postData = async () => {
-        console.log(JSON.stringify(credentials))
         const response = await fetch(
-            `${process.env.REACT_APP_API_URL}api-token-auth/`, {
+            `${process.env.REACT_APP_API_URL}users/`, {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(credentials),
+            body: JSON.stringify(newcredentials),
         }
         );
         return response.json();
@@ -36,10 +35,9 @@ const LoginForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (credentials.username && credentials.password) {
+        if (newcredentials.email && newcredentials.password) {
             postData().then((response) => {
-                window.localStorage.setItem('token', response.token);
-                navigate("/grants");
+                navigate("/");
             });
         }
     };
@@ -48,10 +46,12 @@ const LoginForm = () => {
     return (
         <form className="form-box">
             <div>
-                <h2>Please log in</h2>
+                <h2>Create an account to apply</h2>
             </div>
             <div>
-                <label htmlFor="username">Username:</label>
+                <p>Start your journey today by applying to your favourite scholarships</p>
+            </div>
+            <div>
                 <input
                     type="text"
                     id="username"
@@ -61,7 +61,15 @@ const LoginForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="password">Password:</label>
+                <input
+                    type="email"
+                    id="email"
+                    className="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                />
+            </div>
+            <div>
                 <input
                     type="password"
                     id="password"
@@ -71,9 +79,9 @@ const LoginForm = () => {
                 />
             </div>
             <button type="submit" className="btn" onClick={handleSubmit}>
-                Login
+                Create Account
             </button>
         </form>
     );
 }
-export default LoginForm;
+export default SignUpForm;
