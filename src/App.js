@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
@@ -14,7 +14,6 @@ import "./App.css";
 
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
   return (
     <Router>
       <div id="App">
@@ -24,9 +23,8 @@ function App() {
           <Route path="grant/:id" element={<GrantPage />} />
           <Route path="grants" element={<GrantsPage />} />
           <Route path="login" element={<LoginPage />} />
-
           <Route path="signup" element={<SignUpPage />} />
-          <Route path="account" element={loggedIn ? <AccountPage /> : <LoginPage />} />
+          <Route path="account" element={<AccountPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />

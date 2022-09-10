@@ -1,7 +1,7 @@
 import React from "react";
 
 function AccountPage() {
-    return <h1>Account</h1>
+    <h1>Welcome!</h1>
 }
 
 export default AccountPage;
