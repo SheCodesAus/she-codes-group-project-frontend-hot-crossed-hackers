@@ -46,7 +46,7 @@ const SignUpForm = () => {
     return (
         <form className="form-box">
             <div>
-                <h2>Sign up to apply</h2>
+                <h2>Create an account to apply</h2>
             </div>
             <div>
                 <p>Start your journey today by applying to your favourite scholarships</p>
@@ -79,7 +79,7 @@ const SignUpForm = () => {
                 />
             </div>
             <button type="submit" className="btn" onClick={handleSubmit}>
-                Create an Account
+                Create Account
             </button>
         </form>
     );

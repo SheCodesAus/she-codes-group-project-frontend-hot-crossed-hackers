@@ -6,14 +6,14 @@ function Nav() {
     return (
         <nav>
             <div>
-                <Link to="/"><img src={process.env.PUBLIC_URL + '/logo.png'} className="logo" alt="logo"></img></Link>
+                <Link to="/"><div className="logo" /> <img src={require('./logo.png')} alt="logo" /></Link>
             </div>
-            <ul>
+            <ul className="nav.titles">
                 <li>
                     <Link to="grants"> Grants</Link>
                 </li>
                 <li>
-                    <Link to="login" className="loginbtn"> Log in</Link>
+                    <Link to="login"> Log in</Link>
                 </li>
                 <li>
                     <Link to="Signup"> Sign up</Link>
