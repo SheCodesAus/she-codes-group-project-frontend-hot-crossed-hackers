@@ -38,6 +38,7 @@ const LoginForm = () => {
         event.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
+                console.log("123", response)
                 window.localStorage.setItem('token', response.token);
                 navigate("/grants");
             });
