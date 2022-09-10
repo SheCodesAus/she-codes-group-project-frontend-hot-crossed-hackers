@@ -10,58 +10,58 @@ import Hero from "../components/Hero/Hero"
 
 function HomePage() {
     const [grantList, setGrantList] = useState([]);
-        useEffect(() => {
-            fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
-                .then((results) => {
-                    return results.json();
-                })
-                .then((data) => {
-                    // const shortenedGrantList = data.map((grant, index) => {
-                    //     if (index >2) return;
-                    // })
-                    // console.log(shortenGrantList);
-                    setGrantList(data);
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
+            .then((results) => {
+                return results.json();
+            })
+            .then((data) => {
+                // const shortenedGrantList = data.map((grant, index) => {
+                //     if (index >2) return;
+                // })
+                // console.log(shortenGrantList);
+                setGrantList(data);
             });
-        },[]);
+    }, []);
 
-        return (
-            <div class="main-background">
-                <Hero />
-                <div id="h1-home">
-                    <h1>Featured Grants</h1>
-                </div>
-                <div id= "grant-list">
+    return (
+        <div className="main-background">
+            <Hero />
+            <div id="h1-home">
+                <h1>Featured Grants</h1>
+            </div>
+            <div id="grant-list">
                 {grantList.map((grantData, index) => {
                     if (index > 2) return null;
-                return <GrantCard key={index} grantData={grantData} />;
+                    return <GrantCard key={index} grantData={grantData} />;
                 })}
-                </div>
-                {/* use function below to test dummy data */}
-                {/* <div id="grant-list">
+            </div>
+            {/* use function below to test dummy data */}
+            {/* <div id="grant-list">
                     {allGrants.map((grantData, key) => {
                         return <GrantCard key={key} grantData={grantData} />;
                     })}}
                 </div> */}
-                {/* use function above to test dummy data */}
-                <div id="h1-home">
-                    <h1>Success Stories</h1>
-                </div>
-                <div id="story-list">
-                    {allStories.map((storyData, key) => {
-                        return <StoryCard key={key} storyData={storyData} />;
-                    })}
-                </div>
-
-                <div id="h1-home">
-                    <h1>Our Partners</h1>
-                </div>
-                <div id="partner-list">
-                    {allPartners.map((partnerData, key) => {
-                        return <PartnerCard key={key} partnerData={partnerData} />;
-                    })}
-                </div>
-                
+            {/* use function above to test dummy data */}
+            <div id="h1-home">
+                <h1>Success Stories</h1>
             </div>
+            <div id="story-list">
+                {allStories.map((storyData, key) => {
+                    return <StoryCard key={key} storyData={storyData} />;
+                })}
+            </div>
+
+            <div id="h1-home">
+                <h1>Our Partners</h1>
+            </div>
+            <div id="partner-list">
+                {allPartners.map((partnerData, key) => {
+                    return <PartnerCard key={key} partnerData={partnerData} />;
+                })}
+            </div>
+
+        </div>
     );
 
 }
