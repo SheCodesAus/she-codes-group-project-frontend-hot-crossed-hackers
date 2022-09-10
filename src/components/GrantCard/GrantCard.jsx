@@ -5,10 +5,10 @@ function GrantCard(props) {
     const { grantData } = props;
     return(
         <div className="grant-card">
-        <Link to={`/grant/${grantData.id}`}>
-        <img src={grantData.image}/>
-        <h3>{grantData.title}</h3>
-        </Link>
+            <Link to={`/grant/${grantData.id}`}>
+                <img src={grantData.image} alt="grant"/>
+                <h3>{grantData.title}</h3>
+            </Link>
         </div>
     );
 }

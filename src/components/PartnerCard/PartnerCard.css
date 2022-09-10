@@ -1,10 +1,6 @@
-.partner-card {
-    width: 100%;
-    border: 1px solid white;
-    }
 
-    .partner-card img {
-    width: 80%;
-    height: 300px;
-    object-fit: cover;
-    }
+.partner-card img {
+    width: 100%;
+    object-fit: scale-down;
+    filter: grayscale(100%);
+}
