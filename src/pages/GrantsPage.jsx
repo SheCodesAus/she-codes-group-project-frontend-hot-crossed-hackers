@@ -16,13 +16,8 @@ function GrantsPage() {
             });
             },[]);
 
-
-
-
-
-
         return (
-            <div class="main-background">
+            <div className="main-background">
                 <div id= "grant-list">
                 {grantList.map((grantData, key) => {
                 return <GrantCard key={key} grantData={grantData} />;
