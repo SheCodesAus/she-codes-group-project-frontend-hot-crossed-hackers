@@ -13,6 +13,7 @@ import "./App.css";
 
 
 
+
 function App() {
   const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
   return (
@@ -24,9 +25,9 @@ function App() {
           <Route path="grant/:id" element={<GrantPage />} />
           <Route path="grants" element={<GrantsPage />} />
           <Route path="login" element={<LoginPage />} />
-
           <Route path="signup" element={<SignUpPage />} />
-          <Route path="account" element={loggedIn ? <AccountPage /> : <LoginPage />} />
+          <Route path="account" element={<AccountPage />} />
+          {/* <Route path="account" element={loggedIn ? <AccountPage /> : <LoginPage />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />

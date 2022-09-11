@@ -1,36 +1,7 @@
-// import React, { useState } from "react";
-// // import { renderIntoDocument } from "react-dom/test-utils";
-// import { Link } from "react-router-dom";
-// import './Nav.css'
-
-// function Nav() {
-
-//     function logOut() {
-//         window.localStorage.removeItem('token');
-//     }
-//     return (
-//         <nav>
-//             <div>
-//                 <Link to="/"><div className="logo" /> <img src={require('./logo.png')} alt="logo" /></Link>
-//             </div>
-//             {window.localStorage.getItem('token') ?
-//                 <> <Link className="button" to="/grants">Scholarships </Link>
-//                     <Link className="button" to="/" onClick={logOut}>Logout</Link>
-//                 </>
-//                 : <>
-//                     <Link className="button" to="/Signup">Sign up </Link>
-//                     <Link className="button" to="/Login">Log in </Link></>
-//             }
-//         </nav >
-//     );
-// }
-
-
-// export default Nav;
 
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import './Nav.css'
+import './Nav.css';
 
 const Nav = () => {
     const location = useLocation()
@@ -46,15 +17,11 @@ const Nav = () => {
     }, [location]
     )
 
-    const handleClick = event => {
-        event.currentTarget.classList.toggle('hamburger-menu');
-        event.currentTarget.classList.remove('hamburger-menu');
-    };
 
     return (
         <nav className="nav-bar">
             <div className="left-menu">
-                <Link to="/"><div className="logo" /> <img src={require('./logo.png')} alt="logo" /></Link>
+                <Link to="/"><div /> <img className="logo" src={require('./logo.png')} alt="logo" /></Link>
             </div>
             <div className="right-menu">
                 <Link className="button" to="/grants">Scholarships</Link>
@@ -64,11 +31,6 @@ const Nav = () => {
                 {loggedIn ? (
                     <Link className="button" to="/Account">Account</Link>)
                     : (<Link className="button" to="/Signup">Sign up</Link>)}
-            </div>
-            <div className="hamburger-menu" onClick={handleClick}>
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
             </div>
         </nav>
     );
