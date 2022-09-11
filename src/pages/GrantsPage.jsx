@@ -16,11 +16,6 @@ function GrantsPage() {
             });
             },[]);
 
-
-
-
-
-
         return (
             <div className="main-background">
                 <div id= "grant-list">

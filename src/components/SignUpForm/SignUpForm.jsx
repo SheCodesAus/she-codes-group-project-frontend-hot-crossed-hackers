@@ -21,6 +21,7 @@ const SignUpForm = () => {
     };
 
     const postData = async () => {
+        console.log("New user")
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}users/`, {
             method: "post",
@@ -33,11 +34,12 @@ const SignUpForm = () => {
         return response.json();
     };
 
+
     const handleSubmit = (event) => {
         event.preventDefault();
         if (newcredentials.email && newcredentials.password) {
             postData().then((response) => {
-                navigate("/");
+                navigate("/Login");
             });
         }
     };

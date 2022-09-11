@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import './Nav.css'
+import './Nav.css';
+// import MenuIcon from "./hamburger-menu.png";
 
 const Nav = () => {
+    const [isMobile, setIsMobile] = useState(true);
     const location = useLocation()
     console.log(location);
     const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
@@ -16,17 +18,14 @@ const Nav = () => {
     }, [location]
     )
 
-    const handleClick = event => {
-        event.currentTarget.classList.toggle('hamburger-menu');
-        event.currentTarget.classList.remove('hamburger-menu');
-    };
 
     return (
         <nav className="nav-bar">
             <div className="left-menu">
-                <Link to="/"><div className="logo" /> <img src={require('./logo.png')} alt="logo" /></Link>
+                <Link to="/"><div /> <img className="logo" src={require('./logo.png')} alt="logo" /></Link>
             </div>
-            <div className="right-menu">
+            <div img className={isMobile ? "right-menu-mobile" : "right-menu"}
+                onClick={() => setIsMobile(false)}>
                 <Link className="button" to="/grants">Scholarships</Link>
                 {loggedIn ? (
                     <Link className="button" to="/" onClick={logOut}>Logout</Link>)
@@ -35,11 +34,14 @@ const Nav = () => {
                     <Link className="button" to="/Account">Account</Link>)
                     : (<Link className="button" to="/Signup">Sign up</Link>)}
             </div>
-            <div className="hamburger-menu" onClick={handleClick}>
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
-            </div>
+            <button className="mobile-menu-icon"
+                onClick={() => setIsMobile(!isMobile)}>
+                {isMobile ? (
+                    <i className="fas fa-times"></i>
+                ) : (
+                    <i className="fa fa-bars"></i>
+                )}
+            </button>
         </nav>
     );
 }
