@@ -33,9 +33,9 @@ h2 {
     align-items: left;
 }
 
-.pass-title {
+.password {
     color: #181515;
-    font-weight: bold;
+    font-weight: medium;
     align-items: left;
 }
 
@@ -65,9 +65,13 @@ h2 {
     background: #0d2d6c;
 }
 
-.form-box {
+.login-form-box {
     background: white;
     width: 400px;
     margin: 0 auto 0 auto;
-    padding: 0px 0px 40px 0px;
+    margin-bottom: 420px;
+    padding: 40px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
