@@ -10,13 +10,15 @@ export default function FilterGender(props) {
   return (
     <div className="app">
       <div className="filter-container">
-        <div>Filter by: Gender</div>
         <div>
           <select
             name="category-list"
             id="category-list"
             onChange={handleCategoryChange}
           >
+            <option value="" disabled selected>
+              Gender
+            </option>
             <option value="AN">Any</option>
             <option value="FE">Female</option>
             <option value="MA">Male</option>
