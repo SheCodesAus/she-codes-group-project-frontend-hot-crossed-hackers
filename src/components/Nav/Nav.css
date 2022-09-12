@@ -86,18 +86,24 @@ nav {
         font-size: 18px;
     }
 
-    .buttons {
+    .button {
         color: #ffffff;
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         text-align: center;
-        align-items: center;
-        padding: 32px;
+        padding: 10px;
         width: 100%;
-        transition: all 0.5s ease;
+        /* transition: all 0.5s ease; */
         display: table;
         font-size: 16px;
 
+    }
+
+    .button:hover {
+        color: rgb(33, 179, 224);
+        border-bottom: 0;
+        padding-bottom: 0px;
+        border-radius: 0px;
     }
 
     .mobile-menu-icon {
