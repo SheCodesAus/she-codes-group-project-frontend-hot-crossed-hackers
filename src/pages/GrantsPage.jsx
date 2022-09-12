@@ -12,6 +12,7 @@ import FilterDuration from "../components/FilterDuration/FilterDuration";
 function GrantsPage() {
   const [grantList, setGrantList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedGender, setSelectedGender] = useState("");
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
       .then((results) => {
@@ -26,10 +27,10 @@ function GrantsPage() {
   // Filter useEffect start
   useEffect(() => {
     const filteredGrantList = grantList.filter(
-      (grant) => grant.gender === selectedCategory
+      (grant) => grant.gender === selectedGender
     );
     setGrantList(() => filteredGrantList);
-  }, [selectedCategory]);
+  }, [selectedGender]);
 
   useEffect(() => {
     const filteredGrantList = grantList.filter(
@@ -71,7 +72,7 @@ function GrantsPage() {
   return (
     <div class="main-background">
       <div id="filters">
-        <FilterGender setSelectedCategory={setSelectedCategory} />
+        <FilterGender setSelectedGender={setSelectedGender} />
         <FilterIndigenous setSelectedCategory={setSelectedCategory} />
         <FilterVision setSelectedCategory={setSelectedCategory} />
         <FilterIncome setSelectedCategory={setSelectedCategory} />
