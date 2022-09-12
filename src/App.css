@@ -3,7 +3,7 @@
 }
 
 #grant-list {
-  margin-top: 10%;
+  margin-top: 5%;
   display: grid;
   grid-template-columns: 30% 30% 30%;
   column-gap: 10px;
@@ -12,7 +12,7 @@
 }
 
 #story-list {
-  margin-top: 10%;
+  margin-top: 5%;
   display: grid;
   grid-template-columns: 30% 30% 30%;
   column-gap: 10px;
@@ -20,13 +20,16 @@
   justify-content: center;
 }
 
+
 #partner-list {
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10%;
   column-gap: 5%;
   justify-content: center;
 }
+
 
 #h1-home {
   margin-top: 10%;
