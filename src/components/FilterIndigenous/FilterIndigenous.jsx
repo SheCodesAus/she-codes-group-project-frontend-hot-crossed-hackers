@@ -19,7 +19,7 @@ export default function FilterIndigenous(props) {
           >
             <option value="AN">Any</option>
             <option value="AB">Aboriginal</option>
-            <option value="AT">Aboriginal Torres Strait Islander</option>
+            <option value="AT">Aboriginal TSI</option>
           </select>
         </div>
       </div>
