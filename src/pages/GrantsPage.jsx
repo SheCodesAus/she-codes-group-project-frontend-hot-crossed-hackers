@@ -12,7 +12,7 @@ import FilterIndigenous from "../components/FilterIndigenous/FilterIndigenous";
 function GrantsPage() {
   const [grantList, setGrantList] = useState([]);
   // const [selectedCategory, setSelectedCategory] = useState("");
-  const [filteredGrantList, setFilteredGrantList] = useState(grant);
+  const [filteredGrantList, setFilteredGrantList] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
   const [selectedIndigenous, setSelectedIndigenous] = useState("");
 
@@ -28,12 +28,20 @@ function GrantsPage() {
   }, []);
 
   // Filter useEffect start
+
   useEffect(() => {
-    const filteredGrantList = grantList
+    var filteredGrantList = grantList
       .filter((grant) => grant.gender === selectedGender)
       .filter((grant) => grant.indigenous_status === selectedIndigenous);
     setGrantList(() => filteredGrantList);
   }, [selectedGender, selectedIndigenous]);
+
+  // useEffect(() => {
+  //   var filteredGrantList = grantList
+  //     .filter((grant) => grant.gender === selectedGender)
+  //     .filter((grant) => grant.indigenous_status === selectedIndigenous);
+  //   setGrantList(() => filteredGrantList);
+  // }, [selectedGender, selectedIndigenous]);
 
   // useEffect(() => {
   //   const filteredGrantList = grantList.filter(

@@ -4,7 +4,7 @@ import "./FilterGender.css";
 //Filter list by category in React JS
 export default function FilterGender(props) {
   function handleCategoryChange(event) {
-    props.setSelectedGender(event.target.value);
+    props.setSelectedGender(event.target.id);
   }
 
   return (
