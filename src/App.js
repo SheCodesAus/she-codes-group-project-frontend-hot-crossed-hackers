@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage";
@@ -13,21 +13,26 @@ import "./App.css";
 
 
 
+
 function App() {
+  const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
   return (
     <Router>
-      <Nav />
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="grant/:id" element={<GrantPage />} />
-        <Route path="grants" element={<GrantsPage />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="signup" element={<SignUpPage />} />
-        <Route path="account" element={<AccountPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-      <Footer />
-    </Router>
+      <div id="App">
+        <Nav />
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="grant/:id" element={<GrantPage />} />
+          <Route path="grants" element={<GrantsPage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="signup" element={<SignUpPage />} />
+          <Route path="account" element={<AccountPage />} />
+          {/* <Route path="account" element={loggedIn ? <AccountPage /> : <LoginPage />} /> */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router >
   );
 }
 
