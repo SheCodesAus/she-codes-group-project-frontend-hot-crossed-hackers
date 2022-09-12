@@ -1,7 +1,7 @@
 import React from "react";
+import Profile from "../Profile/Profile";
 
 function AccountPage() {
-    return <h1>Account</h1>
+    return <Profile />;
 }
-
 export default AccountPage;
