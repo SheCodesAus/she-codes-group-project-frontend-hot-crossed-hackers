@@ -18,6 +18,8 @@ function GrantPage() {
 
     return (
         <GrantDetails grantData={grantData}/>
+        
+                
     )
 }
 export default GrantPage;

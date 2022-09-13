@@ -10,12 +10,15 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import GrantCard from "../components/GrantCard/GrantCard";
 import "../App.css"
+import LoadingSpinner from "../components/LoadingSpinner";
 
 function UserProfile() {
+    const [loading, setLoading] = useState(false)
     const [userData, setUserData] = useState();
     const [grantList, setGrantList] = useState([]);
     const { id } = useParams();
     useEffect(() => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}users/${id}`)
             .then((results) => {
                 return results.json();
@@ -23,6 +26,7 @@ function UserProfile() {
             .then((data) => {
                 console.log(data);
                 setUserData(data);
+                setLoading(false)
             });
     }, [id]);
     fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
@@ -31,15 +35,12 @@ function UserProfile() {
         })
         .then((data) => {
             setGrantList(data);
+            setLoading(false)
         });
 
-    if (!userData) {
-        return <h3>Loading profile...</h3>;
-    }
-
     return (
-        <>
             <div className="profile">
+                {loading ? <LoadingSpinner /> : <div>
                 <img id="user-image" src={userData.image} />
 
                 <div className="user-info">
@@ -110,7 +111,8 @@ function UserProfile() {
                     </div>
                 </div>
             </div>
-        </>
+        }</div> 
+    
     );
 }
 

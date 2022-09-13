@@ -6,11 +6,13 @@ import GrantCard from "../components/GrantCard/GrantCard";
 import StoryCard from "../components/StoryCard/StoryCard";
 import PartnerCard from "../components/PartnerCard/PartnerCard";
 import Hero from "../components/Hero/Hero"
-
+import LoadingSpinner from "../components/LoadingSpinner";
 
 function HomePage() {
+    const [loading, setLoading] = useState(false)
     const [grantList, setGrantList] = useState([]);
     useEffect(() => {
+        setLoading(true)
         fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
             .then((results) => {
                 return results.json();
@@ -21,11 +23,13 @@ function HomePage() {
                 // })
                 // console.log(shortenGrantList);
                 setGrantList(data);
+                setLoading(false)
             });
     }, []);
 
     return (
         <div className="main-background">
+            {loading ? <LoadingSpinner /> : <div>
             <Hero />
             <div id="h1-home">
                 <h1>Featured Grants</h1>
@@ -62,6 +66,7 @@ function HomePage() {
             </div>
 
         </div>
+        }</div>
     );
 
 }
