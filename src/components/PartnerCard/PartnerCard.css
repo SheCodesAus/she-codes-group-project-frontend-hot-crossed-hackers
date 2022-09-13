@@ -6,11 +6,3 @@
     padding: 100px, 0, 100px, 0;
     /* /* filter: grayscale(100%); */
 }
-
-#partner-list {
-    margin-top: 0;
-    display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10%;
-    column-gap: 5%;
-    justify-content: center;
-}
