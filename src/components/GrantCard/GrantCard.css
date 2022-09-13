@@ -8,3 +8,39 @@
     height: 300px;
     object-fit: cover;
 }
+
+.grant-title {
+    text-decoration: none;
+    text-align: left;
+    padding: 10px 32px 0px 32px;
+}
+
+.description {
+    text-decoration: none;
+    text-align: left;
+    padding: 0px 32px 0px 32px;
+    font-weight: 400;
+}
+
+.date {
+    text-decoration: none;
+    text-align: left;
+    padding: 0px 32px 0px 32px;
+}
+
+a {
+    text-decoration: none;
+    text-align: left;
+}
+
+.see-more-btn {
+    background: #2456ba;
+    width: 200px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    border: #091938 1px solid;
+    align-items: left;
+    font-weight: 800;
+    font-size: 0.8em;
+}
