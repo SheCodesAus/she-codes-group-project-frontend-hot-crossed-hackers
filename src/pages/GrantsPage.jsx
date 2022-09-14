@@ -35,19 +35,22 @@ export default function GrantsPage() {
 
   useEffect(() => {
     let arr = [...grantList];
+
     if (selectedGender !== "") {
       arr = arr.filter((grant) => grant.gender === selectedGender);
+      console.log("middle", arr, selectedGender);
     }
 
     if (selectedIndigenous !== "") {
       arr = arr.filter(
         (grant) => grant.indigenous_status === selectedIndigenous
       );
+      console.log("middle 2", arr, selectedIndigenous);
     }
 
     setFilteredGrantList(() => arr);
 
-    console.log(arr);
+    console.log("end", arr);
   }, [grantList, selectedGender, selectedIndigenous]);
 
   // Filters useEffect end
@@ -63,14 +66,15 @@ export default function GrantsPage() {
         <FilterEnglishSL setSelectedCategory={setSelectedCategory} />
         <FilterDuration setSelectedCategory={setSelectedCategory} /> */}
       </div>
-      {/* {filteredGrantList.length > 0 ? ( */}
-      <div id="grant-list">
-        {filteredGrantList.map((grantData, key) => {
-          return <GrantCard key={key} grantData={grantData} />;
-        })}
-      </div>
-      {/* ): return (<h5>hi</h5>)
-      // ternary operator fix */}
+      {filteredGrantList.length > 0 ? (
+        <div id="grant-list">
+          {filteredGrantList.map((grantData, key) => (
+            <GrantCard key={key} grantData={grantData} />
+          ))}
+        </div>
+      ) : (
+        <h5>hi</h5>
+      )}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import "./Filters.css";
 //Filter list by category in React JS
 export default function FilterIndigenous(props) {
   function handleCategoryChange(event) {
-    props.setSelectedIndigenous(event.target.id);
+    props.setSelectedIndigenous(event.target.value);
   }
 
   return (
