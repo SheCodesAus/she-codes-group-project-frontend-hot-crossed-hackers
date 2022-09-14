@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+// import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import "./LoginForm.css";
 
 
-const LoginForm = () => {
+function LoginForm() {
     const navigate = useNavigate()
     const [credentials, setCredentials] = useState({
         username: "",
@@ -25,22 +26,35 @@ const LoginForm = () => {
             `${process.env.REACT_APP_API_URL}api-token-auth/`, {
             method: "post",
             headers: {
-                "Content-Type": "application/json",
+                "content-type": "application/json",
             },
             body: JSON.stringify(credentials),
         }
         );
+        console.log(response.status)
         return response.json();
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if (credentials.username && credentials.password) {
-            postData().then((response) => {
-                console.log("User details", response)
-                window.localStorage.setItem('token', response.token);
-                navigate("/account");
-            });
+            postData()
+                .then((data) => {
+                    console.log(data)
+                    if (data.token) {
+                        window.localStorage.setItem('token', data.token);
+                        console.log(data.status)
+                        localStorage.setItem('username', credentials.username);
+                        console.log('logged in', localStorage.getItem('username'));
+                        navigate("/account");
+                    }
+                    else {
+                        console.log("log-in failed")
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         }
     };
 
@@ -51,7 +65,7 @@ const LoginForm = () => {
                 <h2>Please log in</h2>
             </div>
             <div>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="username"></label>
                 <input
                     type="text"
                     id="username"
@@ -61,7 +75,7 @@ const LoginForm = () => {
                 />
             </div>
             <div>
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password"></label>
                 <input
                     type="password"
                     id="password"
