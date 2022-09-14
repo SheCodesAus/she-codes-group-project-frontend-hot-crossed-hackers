@@ -1,5 +1,5 @@
 import React from "react";
-import "./FilterEnglishSL.css";
+import "./Filters.css";
 
 export default function FilterEnglishSL(props) {
   function handleCategoryChange(event) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./FilterIncome.css";
+import "./Filters.css";
 
 export default function FilterIncome(props) {
   function handleCategoryChange(event) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./FilterVision.css";
+import "./Filters.css";
 
 export default function FilterVision(props) {
   function handleCategoryChange(event) {
