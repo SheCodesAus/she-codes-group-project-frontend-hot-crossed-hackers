@@ -46,6 +46,8 @@ export default function GrantsPage() {
     }
 
     setFilteredGrantList(() => arr);
+
+    console.log(arr);
   }, [grantList, selectedGender, selectedIndigenous]);
 
   // Filters useEffect end
