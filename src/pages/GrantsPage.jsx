@@ -8,11 +8,14 @@ import FilterVision from "../components/FilterVision/FilterVision";
 import FilterIncome from "../components/FilterIncome/FilterIncome";
 import FilterEnglishSL from "../components/FilterEnglishSL/FilterEnglishSL";
 import FilterDuration from "../components/FilterDuration/FilterDuration";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 function GrantsPage() {
+  const [loading, setLoading] = useState(false)
   const [grantList, setGrantList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   useEffect(() => {
+    setLoading(true)
     fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
       .then((results) => {
         console.log(results);
@@ -20,6 +23,7 @@ function GrantsPage() {
       })
       .then((data) => {
         setGrantList(data);
+        setLoading(false)
       });
   }, []);
 
@@ -69,7 +73,8 @@ function GrantsPage() {
   // Filters useEffect end
 
   return (
-    <div class="main-background">
+    <div className="main-background">
+    {loading ? <LoadingSpinner /> : <div>
       <div id="filters">
         <FilterGender setSelectedCategory={setSelectedCategory} />
         <FilterIndigenous setSelectedCategory={setSelectedCategory} />
@@ -84,6 +89,7 @@ function GrantsPage() {
         })}
       </div>
     </div>
+  }</div>
   );
 }
 export default GrantsPage;
