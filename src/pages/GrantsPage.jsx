@@ -51,7 +51,7 @@ export default function GrantsPage() {
   // Filters useEffect end
 
   return (
-    <div class="main-background">
+    <div className="main-background">
       <div>Filter by:</div>
       <div id="filters">
         <FilterGender setSelectedGender={setSelectedGender} />
