@@ -9,11 +9,14 @@ function GrantCard(props) {
             <h3 className="grant-title">{grantData.title}</h3>
             <h4 className="date"> Closing data: {new Date(grantData.closing_date).toDateString()}</h4>
             {/* <h4 className="description" >{grantData.description}</h4> */}
+            {/* <div className ="card-CTA"> */}
             <Link to={`/grant/${grantData.id}`}>
                 <h4 className="see-more-btn">
                     See more
                 </h4>
             </Link>
+            <button className="save-btn" >SAVE</button>
+            {/* </div> */}
         </div >
     );
 }

@@ -57,3 +57,32 @@ a {
     box-shadow: none;
     transition: all .3s ease-in-out;
 }
+
+.save-btn{
+margin: 0 10px 40px 300px;
+   background-color:#091938;
+   border:#091938;
+   color: white;
+   padding:8px;
+    
+}
+.save-btn:hover{
+    margin: 0 10px 40px 300px;
+       background-color:#003db7;
+       border:#003db7;
+       color: white;
+       padding:8px;
+        
+    }
+/* .save-btn:active{
+    margin: 0 10px 40px 300px;
+    background-color:#003db7;
+    border:#003db7;
+    color: white;
+    padding:8px;
+
+} */
+/* 
+.card-CTA{
+
+} */

@@ -11,21 +11,10 @@ const Nav = () => {
         window.localStorage.removeItem("token");
         setLoggedIn(false)
     }
-    const username = window.localStorage.getItem("username")
-    const [userData, setUserData] = useState("");
-
-    useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
-            .then(res => res.json())
-            .then(data => { setUserData(data); console.log(data) })
-    }, [username])
-
-    console.log("userData id: ", userData.id)
 
     React.useEffect(() => {
         setLoggedIn(!!window.localStorage.getItem('token'))
     }, [location]
-    
     )
 
     return (
@@ -40,7 +29,7 @@ const Nav = () => {
                     <Link className="button" to="/" onClick={logOut}>Logout</Link>)
                     : (<Link className="button" to="/login">Log in</Link>)}
                 {loggedIn ? (
-                    <Link className="button" to="/sers">Account</Link>)
+                    <Link className="button" to="/users/:id">Account</Link>)
                     : (<Link className="button" to="/Signup">Sign up</Link>)}
             </div>
             <button className="mobile-menu-icon"

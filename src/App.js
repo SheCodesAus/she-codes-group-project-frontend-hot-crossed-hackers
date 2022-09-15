@@ -15,7 +15,7 @@ import "./App.css";
 
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
+  // const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
   return (
     <Router>
       <div id="App">
@@ -27,7 +27,7 @@ function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignUpPage />} />
           <Route exact path="/users/:id" element={<UsersPage />} />
-          <Route path="account" element={loggedIn ? <UsersPage /> : <LoginPage />} />
+          {/* <Route path="account" element={loggedIn ? <UsersPage /> : <LoginPage />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />

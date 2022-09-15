@@ -11,13 +11,17 @@ function LoginForm() {
         password: "",
     });
 
-    const handleChange = (event) => {
+    // const handleChange = (event) => {
+    //     const { id, value } = event.target;
+    //     setCredentials((prevCredentials) => ({
+    //         ...prevCredentials,
+    //         [id]: value,
+    //     }));
+    // };
+    const handleChange = event => {
         const { id, value } = event.target;
-        setCredentials((prevCredentials) => ({
-            ...prevCredentials,
-            [id]: value,
-        }));
-    };
+        setCredentials({ ...credentials, [id]: value });
+      };
 
 
     const postData = async () => {
@@ -46,7 +50,7 @@ function LoginForm() {
                         console.log(data.status)
                         localStorage.setItem('username', credentials.username);
                         console.log('logged in', localStorage.getItem('username'));
-                        navigate("/account");
+                        navigate("/users/:id");
                     }
                     else {
                         console.log("log-in failed")
@@ -72,6 +76,7 @@ function LoginForm() {
                     className="username"
                     placeholder="Enter username"
                     onChange={handleChange}
+                
                 />
             </div>
             <div>
@@ -85,7 +90,7 @@ function LoginForm() {
                 />
             </div>
             <button type="submit" className="btn" onClick={handleSubmit}>
-                Login
+                Log in
             </button>
         </form>
     );
