@@ -10,7 +10,7 @@ import FilterEnglishSL from "../components/FilterEnglishSL/FilterEnglishSL";
 import FilterDuration from "../components/FilterDuration/FilterDuration";
 import LoadingSpinner from "../components/LoadingSpinner";
 
-function GrantsPage() {
+export default function GrantsPage() {
   const [loading, setLoading] = useState(false);
   const [grantList, setGrantList] = useState([]);
   const [filteredGrantList, setFilteredGrantList] = useState([]);
