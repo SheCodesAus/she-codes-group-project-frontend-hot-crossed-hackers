@@ -1,10 +1,59 @@
 .grant-card {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+
+}
+
+.grant-card:hover {
+    /* transform: scale(1.05); */
+    box-shadow: rgba(0, 0, 0, 0.1) 2px 8px 16px;
 }
 
 .grant-card img {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    transition: all .2s ease-in-out;
+}
+
+.project-card-container img:hover {
+    transform: scale(1.25);
+}
+
+.grant-title {
+    text-decoration: none;
+    text-align: left;
+    padding: 10px 32px 0px 32px;
+}
+
+.description {
+    text-decoration: none;
+    text-align: left;
+    padding: 0px 32px 0px 32px;
+    font-weight: 400;
+}
+
+.date {
+    text-decoration: none;
+    text-align: left;
+    padding: 0px 32px 0px 32px;
+    color: rgb(53, 53, 53);
+}
+
+a {
+    text-decoration: none;
+    text-align: left;
+}
+
+.see-more-btn {
+    /* text-decoration: none; */
+    text-align: left;
+    padding: 0px 32px 0px 32px;
+    color: #091938;
+}
+
+.card-shadow {
+    box-shadow: none;
+    transition: all .3s ease-in-out;
 }
