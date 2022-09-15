@@ -105,7 +105,7 @@ export default function GrantsPage() {
               ))}
             </div>
           ) : (
-            <h2>
+            <h2 id="no-matches-message">
               Looks like we don't have any exact matches, try searching a
               different category that might be suitable for you!
             </h2>

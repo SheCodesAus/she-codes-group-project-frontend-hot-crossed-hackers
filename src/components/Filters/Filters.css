@@ -5,4 +5,7 @@
 #category-list {
   padding: 10px;
   margin: 0 10px;
+  background-color: #091938;
+  color: white;
+  font-size: 20px;
 }
