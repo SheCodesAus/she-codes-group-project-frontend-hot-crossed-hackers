@@ -26,6 +26,7 @@
     text-decoration: none;
     text-align: left;
     padding: 0px 32px 0px 32px;
+    color: rgb(53, 53, 53);
 }
 
 a {
@@ -34,13 +35,12 @@ a {
 }
 
 .see-more-btn {
-    background: #2456ba;
-    width: 200px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: white;
-    border: #091938 1px solid;
-    align-items: left;
-    font-weight: 800;
-    font-size: 0.8em;
+    /* text-decoration: none; */
+    text-align: left;
+    padding: 0px 32px 0px 32px;
+}
+
+.card-shadow {
+    box-shadow: none;
+    transition: all .3s ease-in-out;
 }
