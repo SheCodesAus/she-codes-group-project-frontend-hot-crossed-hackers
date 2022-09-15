@@ -20,7 +20,6 @@
   justify-content: center;
 }
 
-
 #partner-list {
   margin-top: 5%;
   margin-bottom: 10%;
@@ -30,12 +29,10 @@
   justify-content: center;
 }
 
-
 #h1-home {
   margin-top: 10%;
   text-align: center;
   font-size: 26px;
-
 }
 
 .profile {
@@ -43,6 +40,15 @@
   padding-top: 40px;
 }
 
-.grantspage{
+#no-matches-message {
+  font-size: 40px;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
+  margin-bottom: 30%;
+}
+
+.grantspage {
   height: 200px;
 }

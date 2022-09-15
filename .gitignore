@@ -23,3 +23,26 @@ yarn-debug.log*
 yarn-error.log*
 
 *.env
+
+
+# code to test dummy data in grants page below 
+
+# // use the function below to test dummy data
+# // function GrantsPage() {
+# //     return (
+
+# //         <div>
+# //             <div id="h1-home">
+# //                 <h1>Grants</h1>
+# //             </div>
+# //             <div id="grant-list">
+# //             {allGrants.map((grantData, key) => {
+# //             return <GrantCard key={key} grantData={grantData} />;
+# //             })}
+# //             </div>
+
+# //         </div>
+# //     );
+
+# // }
+# // export default GrantsPage;
