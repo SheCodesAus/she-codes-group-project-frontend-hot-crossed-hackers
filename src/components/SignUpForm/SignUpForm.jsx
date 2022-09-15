@@ -7,8 +7,9 @@ function SignUpForm() {
 const navigate = useNavigate()
 const [credentials, setCredentials] = useState({
     username: "",
-    password: "",
-    email: ""
+    email: "",
+    password: ""
+    
 });
 
 const handleChange = (e) => {
@@ -37,7 +38,8 @@ const postData = async () => {
 const handleSubmit = (e) => {
     e.preventDefault();
     if (credentials.username && credentials.password && credentials.email) {
-        postData().then((_response) => {
+        postData().then((response) => {
+            window.localStorage.setItem('token', response.token);
             console.log("signup response data: ... ", credentials)
             navigate("/login");
         });

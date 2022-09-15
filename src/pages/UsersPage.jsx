@@ -9,7 +9,7 @@ function UsersPage() {
         fetch(`${process.env.REACT_APP_API_URL}users/${id}`)
             .then(res => res.json())
             .then(data => updateUsers(data))
-    }, [])
+    }, [id])
 
 
 

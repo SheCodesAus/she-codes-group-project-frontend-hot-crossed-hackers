@@ -49,7 +49,7 @@ function LoginForm() {
                         window.localStorage.setItem('token', data.token);
                         console.log(data.status)
                         localStorage.setItem('username', credentials.username);
-                        console.log('logged in', localStorage.getItem('username'));
+                        console.log('logged in', localStorage.getItem('username', "id"));
                         navigate("/users/:id");
                     }
                     else {
