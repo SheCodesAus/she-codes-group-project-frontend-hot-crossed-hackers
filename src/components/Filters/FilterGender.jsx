@@ -15,7 +15,7 @@ export default function FilterGender(props) {
           id="category-list"
           onChange={handleCategoryChange}
         >
-          <option default value="">
+          <option id="filter-title" default value="">
             Gender
           </option>
           <option value="AN">Any</option>

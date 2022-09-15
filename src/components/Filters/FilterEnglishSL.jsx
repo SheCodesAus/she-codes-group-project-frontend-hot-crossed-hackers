@@ -3,24 +3,23 @@ import "./Filters.css";
 
 export default function FilterEnglishSL(props) {
   function handleCategoryChange(event) {
-    props.setSelectedCategory(event.target.value);
+    props.setSelectedEnglishSL(event.target.value);
   }
 
   return (
-    <div className="app">
-      <div className="filter-container">
-        <div>Non-native English Speaker</div>
-        <div>
-          <select
-            name="category-list"
-            id="category-list"
-            onChange={handleCategoryChange}
-          >
-            <option value="AN">Any</option>
-            <option value="YE">Yes</option>
-            {/* <option value="NO">No</option> */}
-          </select>
-        </div>
+    <div className="filter-container">
+      <div>
+        <select
+          name="category-list"
+          id="category-list"
+          onChange={handleCategoryChange}
+        >
+          <option id="filter-title" default value="">
+            Non-native English Speaker
+          </option>
+          <option value="AN">Any</option>
+          <option value="YE">Yes</option>
+        </select>
       </div>
     </div>
   );

@@ -4,17 +4,20 @@ import GrantCard from "../components/GrantCard/GrantCard";
 import React, { useState, useEffect } from "react";
 import FilterGender from "../components/Filters/FilterGender";
 import FilterIndigenous from "../components/Filters/FilterIndigenous";
-// import FilterVision from "../components/FilterVision/FilterVision";
-// import FilterIncome from "../components/FilterIncome/FilterIncome";
-// import FilterEnglishSL from "../components/FilterEnglishSL/FilterEnglishSL";
-// import FilterDuration from "../components/FilterDuration/FilterDuration";
+import FilterVision from "../components/Filters/FilterVision";
+import FilterIncome from "../components/Filters/FilterIncome";
+import FilterEnglishSL from "../components/Filters/FilterEnglishSL";
+import FilterDuration from "../components/Filters/FilterDuration";
 
 export default function GrantsPage() {
   const [grantList, setGrantList] = useState([]);
   const [filteredGrantList, setFilteredGrantList] = useState([]);
   const [selectedGender, setSelectedGender] = useState("");
   const [selectedIndigenous, setSelectedIndigenous] = useState("");
-
+  const [selectedVision, setSelectedVision] = useState("");
+  const [selectedIncome, setSelectedIncome] = useState("");
+  const [selectedEnglishSL, setSelectedEnglishSL] = useState("");
+  const [selectedDuration, setSelectedDuration] = useState("");
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}scholarships/`)
       .then((results) => {
@@ -38,33 +41,51 @@ export default function GrantsPage() {
 
     if (selectedGender !== "") {
       arr = arr.filter((grant) => grant.gender === selectedGender);
-      console.log("middle", arr, selectedGender);
     }
 
     if (selectedIndigenous !== "") {
       arr = arr.filter(
         (grant) => grant.indigenous_status === selectedIndigenous
       );
-      console.log("middle 2", arr, selectedIndigenous);
+    }
+
+    if (selectedVision !== "") {
+      arr = arr.filter((grant) => grant.vision_impairment === selectedVision);
+    }
+    if (selectedIncome !== "") {
+      arr = arr.filter((grant) => grant.low_income === selectedIncome);
+    }
+
+    if (selectedEnglishSL !== "") {
+      arr = arr.filter((grant) => grant.esol === selectedEnglishSL);
+    }
+    if (selectedDuration !== "") {
+      arr = arr.filter((grant) => grant.duration === selectedDuration);
     }
 
     setFilteredGrantList(() => arr);
-
-    console.log("end", arr);
-  }, [grantList, selectedGender, selectedIndigenous]);
+  }, [
+    grantList,
+    selectedGender,
+    selectedIndigenous,
+    selectedVision,
+    selectedIncome,
+    selectedEnglishSL,
+    selectedDuration,
+  ]);
 
   // Filters useEffect end
 
   return (
     <div className="main-background">
-      <div>Filter by:</div>
+      <h1>Filter by:</h1>
       <div id="filters">
         <FilterGender setSelectedGender={setSelectedGender} />
+        <FilterIncome setSelectedIncome={setSelectedIncome} />
+        <FilterDuration setSelectedDuration={setSelectedDuration} />
         <FilterIndigenous setSelectedIndigenous={setSelectedIndigenous} />
-        {/* <FilterVision setSelectedCategory={setSelectedCategory} />
-        <FilterIncome setSelectedCategory={setSelectedCategory} />
-        <FilterEnglishSL setSelectedCategory={setSelectedCategory} />
-        <FilterDuration setSelectedCategory={setSelectedCategory} /> */}
+        <FilterVision setSelectedVision={setSelectedVision} />
+        <FilterEnglishSL setSelectedEnglishSL={setSelectedEnglishSL} />
       </div>
       {filteredGrantList.length > 0 ? (
         <div id="grant-list">
@@ -73,7 +94,10 @@ export default function GrantsPage() {
           ))}
         </div>
       ) : (
-        <h5>hi</h5>
+        <h2>
+          Looks like we don't have any exact matches, try searching a different
+          category that might be suitable for you!
+        </h2>
       )}
     </div>
   );

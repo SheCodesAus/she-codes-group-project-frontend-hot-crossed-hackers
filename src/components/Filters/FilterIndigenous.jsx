@@ -9,13 +9,15 @@ export default function FilterIndigenous(props) {
 
   return (
     <div className="filter-container">
-      <div>Indigenous Status</div>
       <div>
         <select
           name="category-list"
           id="category-list"
           onChange={handleCategoryChange}
         >
+          <option default value="">
+            Indigenous Status
+          </option>
           <option value="AN">Any</option>
           <option value="AB">Aboriginal</option>
           <option value="AT">Aboriginal TSI</option>
