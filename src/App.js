@@ -7,7 +7,7 @@ import GrantsPage from "./pages/GrantsPage";
 import GrantPage from "./pages/GrantPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-import AccountPage from "./pages/AccountPage";
+import UsersPage from "./pages/UsersPage";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import "./App.css";
 
@@ -15,7 +15,7 @@ import "./App.css";
 
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
+  // const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
   return (
     <Router>
       <div id="App">
@@ -26,8 +26,8 @@ function App() {
           <Route path="grants" element={<GrantsPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignUpPage />} />
-          <Route path="account" element={<AccountPage />} />
-          {/* <Route path="account" element={loggedIn ? <AccountPage /> : <LoginPage />} /> */}
+          <Route exact path="/users/:id" element={<UsersPage />} />
+          {/* <Route path="account" element={loggedIn ? <UsersPage /> : <LoginPage />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />

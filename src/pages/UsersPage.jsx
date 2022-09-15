@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
 
 function UsersPage() {
     const { id } = useParams();
@@ -9,7 +9,7 @@ function UsersPage() {
         fetch(`${process.env.REACT_APP_API_URL}users/${id}`)
             .then(res => res.json())
             .then(data => updateUsers(data))
-    }, [])
+    }, [id])
 
 
 
@@ -20,14 +20,6 @@ function UsersPage() {
                 <h3>{users.username}</h3>
                 <h4>{users.bio}</h4>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
         </div>
     )
 }

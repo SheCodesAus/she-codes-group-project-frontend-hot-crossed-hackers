@@ -5,7 +5,7 @@ import './Nav.css';
 const Nav = () => {
     const [isMobile, setIsMobile] = useState(true);
     const location = useLocation()
-    console.log(location);
+    // console.log(location);
     const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
     const logOut = () => {
         window.localStorage.removeItem("token");
@@ -16,7 +16,6 @@ const Nav = () => {
         setLoggedIn(!!window.localStorage.getItem('token'))
     }, [location]
     )
-
 
     return (
         <nav className="nav-bar">
@@ -30,7 +29,7 @@ const Nav = () => {
                     <Link className="button" to="/" onClick={logOut}>Logout</Link>)
                     : (<Link className="button" to="/login">Log in</Link>)}
                 {loggedIn ? (
-                    <Link className="button" to="/Account">Account</Link>)
+                    <Link className="button" to="/users/:id">Account</Link>)
                     : (<Link className="button" to="/Signup">Sign up</Link>)}
             </div>
             <button className="mobile-menu-icon"
