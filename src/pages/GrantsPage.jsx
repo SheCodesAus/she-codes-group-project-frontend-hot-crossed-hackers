@@ -24,7 +24,11 @@ function GrantsPage() {
       .then((data) => {
         setGrantList(data);
         setLoading(false)
-      });
+      })
+      .catch(() => {
+      	setLoading(false)
+      })
+
   }, []);
 
   // Filter useEffect start
