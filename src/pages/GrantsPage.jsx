@@ -2,12 +2,12 @@
 // import { allGrants } from "../data"; use this to test dummy data
 import GrantCard from "../components/GrantCard/GrantCard";
 import React, { useState, useEffect } from "react";
-import FilterGender from "../components/FilterGender/FilterGender";
-import FilterIndigenous from "../components/FilterIndigenous/FilterIndigenous";
-import FilterVision from "../components/FilterVision/FilterVision";
-import FilterIncome from "../components/FilterIncome/FilterIncome";
-import FilterEnglishSL from "../components/FilterEnglishSL/FilterEnglishSL";
-import FilterDuration from "../components/FilterDuration/FilterDuration";
+import FilterGender from "../components/Filters/FilterGender";
+import FilterIndigenous from "../components/Filters/FilterIndigenous";
+import FilterVision from "../components/Filters/FilterVision";
+import FilterIncome from "../components/Filters/FilterIncome";
+import FilterEnglishSL from "../components/Filters/FilterEnglishSL";
+import FilterDuration from "../components/Filters/FilterDuration";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function GrantsPage() {

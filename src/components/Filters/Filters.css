@@ -1,8 +1,8 @@
 .filter-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 #category-list {
-  padding: 5px;
+  padding: 10px;
+  margin: 0 10px;
 }
