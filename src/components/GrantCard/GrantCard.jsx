@@ -29,7 +29,7 @@ function GrantCard(props) {
                 
             })
                 .then(res => {
-                    if (res.ok) { console.log("HTTP request successful"); navigate("/") }
+                    if (res.ok) { console.log("HTTP request successful"); navigate("/grants") }
                     else { console.log("HTTP request unsuccessful") }
                 })
         }
@@ -46,7 +46,7 @@ function GrantCard(props) {
                 }
             })
                 .then(res => {
-                    if (res.ok) { console.log("HTTP request successful"); navigate("/") }
+                    if (res.ok) { console.log("HTTP request successful"); navigate("/grants") }
                     else { console.log("HTTP request unsuccessful") }
                 })
         }
