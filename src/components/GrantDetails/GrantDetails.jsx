@@ -62,11 +62,14 @@ function GrantDetails(props) {
         <li>Eligibility: {grantData.eligibility}</li>
         <br></br>
 
+<div className="container-url">
+<div>
         {window.localStorage.getItem('token') ?
         <a href={grantData.url}>
             <button id="apply-button">Click Here To Find Out More!</button>
-        </a> : <Link to="signup">Sign Up to Apply!</Link>}
+        </a> : <Link to="/signup">Sign Up to Apply!</Link>}
 
+</div>
         {window.localStorage.getItem('token') ?
 <div>
         
@@ -80,7 +83,14 @@ function GrantDetails(props) {
         </button>
 )}
 </div>
+
 : null}
+
+
+</div>
+
+
+
         <br></br>
         </ul>
     </div>

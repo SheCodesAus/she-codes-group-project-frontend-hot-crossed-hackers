@@ -18,7 +18,7 @@ function FavoriteCard(props) {
     return(
         <div className="container">
         <div className="fav-card">
-            <Link to={`grant/${favoriteData}`}>
+            <Link to={`/grant/${favoriteData}`}>
                 <img src={scholarshipData.image} className='w-100 hover-shadow' alt="fav"/>
                 <h3 className="fav-title">{scholarshipData.title}</h3>
             </Link>

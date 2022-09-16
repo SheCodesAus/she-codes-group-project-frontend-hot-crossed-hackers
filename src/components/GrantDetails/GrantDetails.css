@@ -91,5 +91,10 @@ img {
     line-height: normal;
   }
 }
-
+.container-url{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 /* media queries end */
