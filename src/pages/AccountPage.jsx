@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import FavoriteCard from "../components/FavoriteCard/FavoriteCard";
+import FavoriteCard from "../components/FavoriteCard/FavoriteCard";
 
 
 
@@ -12,7 +12,7 @@ function AccountPage() {
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
             .then(res => res.json())
-            .then(data => { setUserData(data) ; setUserFavoriteData(data.favorites) }
+            .then(data => { setUserData(data) ; setUserFavoriteData(data.favorites) })
     }, [username])
 
 
