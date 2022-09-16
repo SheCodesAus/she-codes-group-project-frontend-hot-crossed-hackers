@@ -7,7 +7,7 @@ import GrantsPage from "./pages/GrantsPage";
 import GrantPage from "./pages/GrantPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-import UsersPage from "./pages/UsersPage";
+import AccountPage from "./pages/AccountPage";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import "./App.css";
 
@@ -26,7 +26,7 @@ function App() {
           <Route path="grants" element={<GrantsPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignUpPage />} />
-          <Route exact path="/users/:id" element={<UsersPage />} />
+          <Route exact path="/users/:id" element={<AccountPage />} />
           {/* <Route path="account" element={loggedIn ? <UsersPage /> : <LoginPage />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
