@@ -136,7 +136,19 @@ h2 {
 
 .username,
 .message,
-.email {
+.email, 
+.name, 
+.postcode,
+.gender,
+.indigenousstatus, 
+.visionimpairment, 
+.lowincome, 
+.ESOL, 
+.birthyear, 
+.duration,
+.employment, 
+.education, 
+.industry {
   background: #ffffff;
   border: #ccc 1px solid;
   padding: 10px;
