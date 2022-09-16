@@ -21,7 +21,6 @@ function LoginForm() {
 
 
     const postData = async () => {
-        console.log(JSON.stringify(credentials))
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}api-token-auth/`, {
             method: "post",
@@ -46,7 +45,7 @@ function LoginForm() {
                         console.log(data.status)
                         localStorage.setItem('username', credentials.username);
                         console.log('logged in', localStorage.getItem('username'));
-                        navigate("/account");
+                        navigate("/");
                     }
                     else {
                         console.log("log-in failed")
@@ -65,7 +64,7 @@ function LoginForm() {
                 <h2>Please log in</h2>
             </div>
             <div>
-                <label htmlFor="username">Username</label>
+                <label htmlFor="username"></label>
                 <input
                     type="text"
                     id="username"
@@ -75,7 +74,7 @@ function LoginForm() {
                 />
             </div>
             <div>
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password"></label>
                 <input
                     type="password"
                     id="password"

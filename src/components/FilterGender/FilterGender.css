@@ -1,0 +1,8 @@
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#category-list {
+  padding: 5px;
+}
