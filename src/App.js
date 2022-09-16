@@ -15,7 +15,7 @@ import "./App.css";
 
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
+  // const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
   return (
     <Router>
       <div id="App">

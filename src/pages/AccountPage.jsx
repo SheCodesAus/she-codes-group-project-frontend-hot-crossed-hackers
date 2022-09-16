@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import FavoriteCard from "../components/FavoriteCard/FavoriteCard";
+// import FavoriteCard from "../components/FavoriteCard/FavoriteCard";
 
 
 
@@ -12,7 +12,7 @@ function AccountPage() {
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
             .then(res => res.json())
-            .then(data => { setUserData(data); console.log(data) ; setUserFavoriteData(data.favorites) })
+            .then(data => { setUserData(data); console.log(data); setUserFavoriteData(data.favorites) })
     }, [username])
 
 
@@ -20,19 +20,19 @@ function AccountPage() {
     return (
         <div>
             <h2 id="project-title">{userData.username} </h2>
-            <h3>Your Saved Favorites:</h3> 
-                    
-                    {userFavoriteData[0] ?
-                    <div>
-                        {userFavoriteData.map((favoriteData, index) => {
-                            return (
+            <h3>Your Saved Favorites:</h3>
+
+            {userFavoriteData[0] ?
+                <div>
+                    {userFavoriteData.map((favoriteData, index) => {
+                        return (
                             <ul index={index}>
                                 <h3 >{favoriteData}</h3>
                             </ul>
-                            )
-                        })}
-                        </div>
-                        : 'No Favorite Scholarships yet, save the first!'}  
+                        )
+                    })}
+                </div>
+                : 'No Favorite Scholarships yet, save the first!'}
 
 
             <div id="project-page-container-bottom">
