@@ -9,8 +9,6 @@ function GrantCard(props) {
 
     const username = window.localStorage.getItem("username")
     const [userData, setUserData] = useState( {favorites: []});
-    // const [savebutton, setSaveButton ] = useState(!!userData.favorites.includes(grantData.id))
-    // const [savebutton, setSaveButton ] = useState(false)
 
 
     useEffect(() => {

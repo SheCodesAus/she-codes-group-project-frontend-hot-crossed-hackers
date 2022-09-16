@@ -16,11 +16,13 @@ function FavoriteCard(props) {
     }, [favoriteData]);
 
     return(
-        <div className="grant-card">
+        <div className="container">
+        <div className="fav-card">
             <Link to={`/grant/${favoriteData}`}>
-                <img src={scholarshipData.image} alt="grant"/>
-                <h3>{scholarshipData.title}</h3>
+                <img src={scholarshipData.image} className='w-100 hover-shadow' alt="fav"/>
+                <h3 className="fav-title">{scholarshipData.title}</h3>
             </Link>
+        </div>
         </div>
     );
 }
