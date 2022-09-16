@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import AccountPage from "./pages/AccountPage";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
+import ContactPage from "./pages/ContactPage";
 import "./App.css";
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignUpPage />} />
           <Route path="users/:id" element={<AccountPage />} />
+          <Route path="contact" element={<ContactPage />} />
           {/* <Route path="account" element={loggedIn ? <AccountPage /> : <LoginPage />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
