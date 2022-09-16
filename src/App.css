@@ -134,6 +134,16 @@ form {
     margin-top: 60%;
     text-align: center;
   }
+
+  #partner-list {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    column-gap: 2%;
+    justify-content: center;
+  }
 }
 
 /* tablet view */
