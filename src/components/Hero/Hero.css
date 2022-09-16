@@ -13,15 +13,7 @@
 /* smartphone view: 1 tile */
 @media screen and (max-width: 480px) {
   .hero-image {
-    background-blend-mode: multiply;
-    /* background-color: rgba(0,0,0,.6); */
-    background-image: url(https://i.pinimg.com/originals/d6/ea/cd/d6eacd91fbb9dd70e17334109adafa60.jpg);
-    display: flex;
-    height: 18rem;
-    position: initial;
-    width: 100%;
-
-    padding-left: 13rem;
+    display: none;
   }
 }
 

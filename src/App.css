@@ -69,6 +69,17 @@
     padding-bottom: 25%;
     position: relative;
   }
+
+  #h1-home {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .h1-featured-g {
+    margin-top: 60%;
+    text-align: center;
+  }
 }
 
 /* media queries end */
