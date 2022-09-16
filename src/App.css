@@ -1,3 +1,15 @@
+p {
+  font-family: 'Open sans', sans-serif;
+}
+
+h2 {
+  font-family: 'Open sans', sans-serif;
+}
+
+h3 {
+  font-family: 'Open sans', sans-serif;
+}
+
 .main-background {
   background-color: white;
 }
