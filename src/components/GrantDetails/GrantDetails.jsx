@@ -5,7 +5,6 @@ import "./GrantDetails.css";
 function GrantDetails(props) {
   const { grantData } = props;
 
-
   const token = window.localStorage.getItem("token")
   const navigate = useNavigate();
 
@@ -54,10 +53,10 @@ function GrantDetails(props) {
       }
   };
 
-  
+ 
   return (
     <div className="details-container">
-      <img src={grantData.image} alt="grant" />
+      <img id="details-image" src={grantData.image} alt="grant" />
       <p id="main-title">{grantData.title}</p>
       <ul>
         <li>Organisation: {grantData.organisation}</li> <br></br>
@@ -66,7 +65,7 @@ function GrantDetails(props) {
         <li>Eligibility: {grantData.eligibility}</li>
         <br></br>
         <a href={grantData.url}>
-          <li>More information at: {grantData.url}</li>
+          <button id="apply-button">Click Here To Find Out More!</button>
         </a>
         {/* <button onClick={handleSave} className="save-btn" >SAVE</button>
             <button onClick={handleDelete} className="save-btn" >UNSAVE</button> */}

@@ -9,3 +9,20 @@
   color: white;
   font-size: 20px;
 }
+
+/* media queries start */
+
+/* smartphone view: 1 tile */
+@media screen and (max-width: 480px) {
+  .filter-container {
+    margin-left: 20%;
+  }
+
+  #category-list {
+    padding: 10px;
+    background-color: #091938;
+    color: white;
+    font-size: 20px;
+  }
+}
+/* media queries end */

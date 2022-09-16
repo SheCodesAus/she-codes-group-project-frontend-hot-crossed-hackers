@@ -1,11 +1,37 @@
 .story-card {
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    padding-top: 0%;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding-top: 0%;
 }
 
 .story-card img {
-    width: 100%;
-    object-fit: contain;
-    background-color: white;
+  width: 100%;
+  object-fit: contain;
+  background-color: white;
 }
+
+/* media queries start */
+
+/* smartphone view: 1 tile */
+@media screen and (max-width: 480px) {
+  .story-card {
+    width: 100%;
+    margin-left: 15%;
+    align-items: center;
+    margin-top: 10%;
+  }
+  .story-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 992px) {
+  .story-card {
+    flex: 50%;
+  }
+}
+/* media queries end */
