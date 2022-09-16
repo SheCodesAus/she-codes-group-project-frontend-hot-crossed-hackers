@@ -18,8 +18,10 @@ function AccountPage() {
 
     return (
         <div>
-            <h2 id="project-title">{userData.username} </h2>
-            <h3>Your Saved Favorites:</h3> 
+            <h1 id="user-title">Welcome, {userData.username}</h1>
+
+            <h3>Your Saved Favorited Scholarships:</h3> 
+            <br></br>
                     
                     {userFavoriteData[0] ?
 
@@ -36,7 +38,7 @@ function AccountPage() {
 
 
 
-            <div id="project-page-container-bottom">
+            <div>
                 <Link className="button" to="/grants">View More Scholarships</Link>
             </div>
         </div>
