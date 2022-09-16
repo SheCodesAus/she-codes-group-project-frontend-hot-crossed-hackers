@@ -82,4 +82,11 @@
   }
 }
 
+/* tablet view */
+
+@media screen and (max-width: 930px) {
+  #filter-by-text {
+    margin-top: 15%;
+  }
+}
 /* media queries end */
