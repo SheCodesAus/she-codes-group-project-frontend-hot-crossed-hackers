@@ -1,4 +1,121 @@
 nav {
+  color: #ffffff;
+  background-color: #091938;
+  /* background-image: linear-gradient(to bottom right, #091938, #1044ad); */
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: centre;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 40px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.button {
+  justify-content: inline;
+  color: var(--color-primary);
+  font-family: var(--regular);
+  text-decoration: none;
+  border-radius: 6px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.button:hover {
+  border-bottom: 4px solid rgb(33, 179, 224);
+  padding-bottom: 3px;
+  border-radius: 0px;
+}
+
+.left-menu {
+  padding-left: 1rem;
+}
+
+.right-menu {
+  padding-right: 1rem;
+}
+
+.logo {
+  margin: 0;
+  max-width: 60%;
+  height: 60%;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 988px) {
+  .logo {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+  }
+
+  .right-menu {
+    display: none;
+  }
+
+  .right-menu-mobile {
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    background-color: #091938;
+    padding: 10px;
+    left: 0;
+    top: 75px;
+    /* transition: all 0.5s ease-out; */
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .button {
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    /* transition: all 0.5s ease; */
+    display: table;
+    font-size: 16px;
+  }
+
+  .button:hover {
+    color: rgb(33, 179, 224);
+    border-bottom: 0;
+    padding-bottom: 0px;
+    border-radius: 0px;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    background-color: #091938;
+    position: absolute;
+    font-size: 26px;
+    color: white;
+    border: none;
+    outline: none;
+    top: 22px;
+    right: 25px;
+  }
+
+  nav {
     color: #ffffff;
     background-color: #091938;
     /* background-image: linear-gradient(to bottom right, #091938, #1044ad); */
@@ -7,115 +124,10 @@ nav {
     justify-content: space-around;
     align-items: centre;
     display: flex;
-    align-items: center;
     gap: 2rem;
     padding: 40px;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
-}
-
-.button {
-    justify-content: inline;
-    color: var(--color-primary);
-    font-family: var(--regular);
-    text-decoration: none;
-    border-radius: 6px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.button:hover {
-    border-bottom: 4px solid rgb(33, 179, 224);
-    padding-bottom: 3px;
-    border-radius: 0px;
-}
-
-.left-menu {
-    padding-left: 1rem;
-}
-
-.right-menu {
-    padding-right: 1rem;
-    ;
-}
-
-.logo {
-    margin: 0;
-    max-width: 60%;
-    height: 60%;
-}
-
-.logo img {
     width: 100%;
-    height: auto;
-    display: block;
-}
-
-.mobile-menu-icon {
-    display: none;
-}
-
-@media screen and (max-width: 988px) {
-    .logo {
-        display: flex;
-        position: absolute;
-        top: 15px;
-        left: 25px;
-    }
-
-    .right-menu {
-        display: none;
-
-    }
-
-    .right-menu-mobile {
-        position: absolute;
-        flex-direction: row;
-        align-items: center;
-        background-color: #091938;
-        padding: 10px;
-        left: 0;
-        top: 75px;
-        /* transition: all 0.5s ease-out; */
-        width: 100%;
-        font-size: 18px;
-    }
-
-    .button {
-        color: #ffffff;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-        padding: 10px;
-        width: 100%;
-        /* transition: all 0.5s ease; */
-        display: table;
-        font-size: 16px;
-
-    }
-
-    .button:hover {
-        color: rgb(33, 179, 224);
-        border-bottom: 0;
-        padding-bottom: 0px;
-        border-radius: 0px;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-        background-color: #091938;
-        position: absolute;
-        font-size: 26px;
-        color: white;
-        border: none;
-        outline: none;
-        top: 22px;
-        right: 25px;
-    }
-
+    position: absolute;
+  }
 }
