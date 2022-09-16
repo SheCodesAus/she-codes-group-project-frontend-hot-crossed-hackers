@@ -83,7 +83,7 @@ a {
   }
   .grant-card img {
     width: 100%;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
     transition: all 0.2s ease-in-out;
   }

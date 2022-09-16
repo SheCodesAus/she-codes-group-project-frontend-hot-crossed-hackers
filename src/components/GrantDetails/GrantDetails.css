@@ -28,20 +28,27 @@ img {
 /* media queries start */
 
 /* smartphone view: 1 tile */
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 480px) {
   .details-container {
-    width: 80%;
-    margin-left: 15%;
+    width: 100%;
+    /* margin-left: 15%; */
     align-items: center;
+    margin-top: 10%;
     padding: 0%;
-    /* margin-top: 10%; */
   }
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  #details-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 40%;
+    margin-left: 5%;
+  }
+
+  #main-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: normal;
   }
 }
 

@@ -5,7 +5,7 @@ function GrantDetails(props) {
   const { grantData } = props;
   return (
     <div className="details-container">
-      <img src={grantData.image} alt="grant" />
+      <img id="details-image" src={grantData.image} alt="grant" />
       <p id="main-title">{grantData.title}</p>
       <ul>
         <li>Organisation: {grantData.organisation}</li> <br></br>
@@ -13,9 +13,9 @@ function GrantDetails(props) {
         <br></br>
         <li>Eligibility: {grantData.eligibility}</li>
         <br></br>
-        <a href={grantData.url}>
+        {/* <a href={grantData.url}>
           <li>More information at: {grantData.url}</li>
-        </a>
+        </a> */}
         <br></br>
       </ul>
     </div>

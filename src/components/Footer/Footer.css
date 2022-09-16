@@ -14,7 +14,7 @@ footer {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  width: max-content;
+  /* width: max-content; */
 }
 
 footer ul {
@@ -53,3 +53,15 @@ footer a {
   z-index: 1;
   flex-grow: 0;
 }
+
+/* media queries start */
+
+/* smartphone view*/
+
+@media screen and (max-width: 480px) {
+  footer {
+    width: max-content;
+  }
+}
+
+/* media queries end */

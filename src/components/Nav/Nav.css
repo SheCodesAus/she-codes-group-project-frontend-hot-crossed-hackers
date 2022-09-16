@@ -107,7 +107,7 @@ nav {
   .mobile-menu-icon {
     display: block;
     background-color: #091938;
-    position: absolute;
+    position: fixed;
     font-size: 26px;
     color: white;
     border: none;
@@ -129,7 +129,7 @@ nav {
     padding: 40px;
     top: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     margin-bottom: 10%;
   }
 }
