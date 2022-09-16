@@ -33,9 +33,6 @@ if(window.localStorage.getItem('token')){
             {showUpdateForm ?
             <UserQuiz/> : null}
 
-            <br></br>
-            <br></br>
-
             <h1>Your Saved Favorited Scholarships:</h1> 
             <br></br>
                     

@@ -129,8 +129,6 @@ function UserQuiz() {
                     <button type="submit" className="btn">Send</button>
                 </div>
             </form>
-
-
     </section>
     );
 }
