@@ -15,6 +15,7 @@ function ContactPage() {
                     id="username"
                     className="username"
                     placeholder="Enter username"
+                    name="username"
                 />
             </div>
             <div>
@@ -23,7 +24,7 @@ function ContactPage() {
                     id="email"
                     className="email"
                     placeholder="Email"
-
+                    name="email"
                 />
             </div>
             <div>
@@ -32,6 +33,8 @@ function ContactPage() {
                     id="message"
                     className="message"
                     placeholder="Message"
+                    name="message"
+
                 />
             </div>
 
