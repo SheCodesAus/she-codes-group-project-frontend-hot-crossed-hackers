@@ -7,7 +7,7 @@ nav {
   align-items: centre;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 10rem;
   padding: 32px;
   position: -webkit-sticky;
   position: sticky;
@@ -36,7 +36,8 @@ nav {
 
 .left-menu {
   padding-left: 0rem;
-}
+  justify-content: left;
+} 
 
 .right-menu {
   padding-right: 1rem;
@@ -44,8 +45,10 @@ nav {
 
 .logo {
   margin: 0;
-  max-width: 60%;
-  height: 60%;
+  max-width: 50%;
+  height: 50%;
+  align-items: left;
+  padding-right:120px ;
 }
 
 .logo img {

@@ -19,7 +19,7 @@
     font-size: 80px;
     text-align: left;
     flex: left;
-    padding: 80px 120px 0px 160px;
+    padding: 80px 120px 0px 210px;
     margin: 0;
 
 }
@@ -28,7 +28,7 @@
     font-size: 24px;
     font-weight: 250;
     color: rgb(255, 255, 255);
-    padding: 12px 48px 12px 166px;
+    padding: 12px 48px 12px 220px;
     margin: 0;
     text-align: left;
   display: flex;
@@ -42,7 +42,7 @@
   display: inline-block;
   border: 2px solid rgb(255, 255, 255);
   margin-top: 20px;
-  margin-left: 164px;
+  margin-left: 216px;
 }
 .singUp-button:hover {
   color: white;
