@@ -4,9 +4,9 @@ import "./GrantDetails.css";
 function GrantDetails(props) {
   const { grantData } = props;
 
-  
   return (
     <div className="details-container">
+
       <img id="single-pic-grant-page" src={grantData.image} alt="grant" />
       <p id="main-title">{grantData.title}</p>
       <ul>
