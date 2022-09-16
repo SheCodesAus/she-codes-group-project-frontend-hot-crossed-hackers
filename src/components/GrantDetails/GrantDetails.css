@@ -1,4 +1,4 @@
-/* .details-container {
+.details-container {
   width: 1300px;
   padding: 50px;
   padding-top: 0%;
@@ -17,8 +17,7 @@
   text-align: center;
 }
 
-img {
-  max-width: 80%;
+.img {
   height: 500px;
   display: block;
   margin-left: auto;
@@ -40,7 +39,7 @@ img {
   margin-left: 16px;
   font-weight: 800;
   font-size: 0.6em;
-} */
+}
 
 /* media queries start */
 
