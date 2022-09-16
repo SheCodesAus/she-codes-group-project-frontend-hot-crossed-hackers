@@ -13,14 +13,7 @@ const UserProfile = () => {
             <div>
                 <p>Your Profile</p>
             </div>
-            <div>
-                {/* <input
-                    type="text"
-                    id="username"
-                    className="username"
-                    placeholder="Enter username"
-                /> */}
-            </div>
+
             <div>
                 <input
                     type="email"

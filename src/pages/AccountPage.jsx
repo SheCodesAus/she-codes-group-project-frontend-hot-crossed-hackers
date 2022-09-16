@@ -32,8 +32,8 @@ if(window.localStorage.getItem('token')){
 
             {showUpdateForm ?
             <UserQuiz/> : null}
-
-            <h1>Your Saved Favorited Scholarships:</h1> 
+<br></br>
+            <h1>Your Saved Scholarships:</h1> 
             <br></br>
                     
                     {userFavoriteData[0] ?
@@ -48,9 +48,8 @@ if(window.localStorage.getItem('token')){
                             })}
                             </div>
                         : 'No Favorite Scholarships yet, save the first!'}  
-
-
-
+                        <br></br>
+                        <br></br>
 
             <div>
                 <Link className="button" to="/grants">View More Scholarships</Link>
