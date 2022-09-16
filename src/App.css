@@ -52,3 +52,25 @@
 .grantspage {
   height: 200px;
 }
+
+/* media queries start */
+/* smartphone view: 1 tile */
+@media screen and (max-width: 480px) {
+  #grant-list {
+    display: block;
+    width: 100%;
+    padding-bottom: 25%;
+    position: relative;
+  }
+}
+/* 
+  #grant-list {
+    margin-top: 5%;
+    display: flex;
+    grid-template-columns: 100%;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+  }
+
+/* media queries end */
