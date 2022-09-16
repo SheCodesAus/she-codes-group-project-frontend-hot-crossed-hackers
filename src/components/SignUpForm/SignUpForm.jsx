@@ -3,48 +3,49 @@ import { useNavigate } from 'react-router-dom'
 import "./SignUpForm.css";
 
 
+function SignUpForm() {
+const navigate = useNavigate()
+const [credentials, setCredentials] = useState({
+    username: "",
+    email: "",
+    password: ""
+    
+});
 
-const SignUpForm = () => {
-    const navigate = useNavigate()
-    const [newcredentials, setNewCredentials] = useState({
-        username: "",
-        email: "",
-        password: "",
-    });
+const handleChange = (e) => {
+    const { id, value } = e.target;
+    setCredentials((prevCredentials) => ({
+        ...prevCredentials,
+        [id]: value,
+    }));
+};
 
-    const handleChange = (event) => {
-        const { id, value } = event.target;
-        setNewCredentials((prevCredentials) => ({
-            ...prevCredentials,
-            [id]: value,
-        }));
-    };
-
-    const postData = async () => {
-        console.log("New user")
-        const response = await fetch(
-            `${process.env.REACT_APP_API_URL}users/`, {
+const postData = async () => {
+    const response = await fetch(
+        `${process.env.REACT_APP_API_URL}users/`,
+        {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(newcredentials),
+            body: JSON.stringify(credentials),
         }
-        );
-        return response.json();
-    };
+    );
+    return response.json()
+};
 
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        if (newcredentials.email && newcredentials.password) {
-            postData().then((response) => {
-                navigate("/Login");
-            });
-        }
-    };
-
-
+const handleSubmit = (e) => {
+    e.preventDefault();
+    if (credentials.username && credentials.password && credentials.email) {
+        postData().then((response) => {
+            window.localStorage.setItem('token', response.token);
+            console.log("signup response data: ... ", credentials)
+            navigate("/login");
+        });
+        
+    }
+}
     return (
         <form className="form-box">
             <div>

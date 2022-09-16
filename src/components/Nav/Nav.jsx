@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './Nav.css';
-// import MenuIcon from "./hamburger-menu.png";
 
 const Nav = () => {
     const [isMobile, setIsMobile] = useState(true);
