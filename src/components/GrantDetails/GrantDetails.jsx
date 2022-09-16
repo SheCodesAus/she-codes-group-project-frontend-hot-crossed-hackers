@@ -9,9 +9,6 @@ function GrantDetails(props) {
 
   const username = window.localStorage.getItem("username")
   const [userData, setUserData] = useState( {favorites: []});
-  // const [savebutton, setSaveButton ] = useState(!!userData.favorites.includes(grantData.id))
-  // const [savebutton, setSaveButton ] = useState(false)
-
 
   useEffect(() => {
       fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
@@ -31,7 +28,7 @@ function GrantDetails(props) {
               
           })
               .then(res => {
-                  if (res.ok) { console.log("HTTP request successful"); navigate("/") }
+                  if (res.ok) { console.log("HTTP request successful"); navigate("/grants") }
                   else { console.log("HTTP request unsuccessful") }
               })
       }
@@ -48,7 +45,7 @@ function GrantDetails(props) {
               }
           })
               .then(res => {
-                  if (res.ok) { console.log("HTTP request successful"); navigate("/") }
+                  if (res.ok) { console.log("HTTP request successful"); navigate("/grants") }
                   else { console.log("HTTP request unsuccessful") }
               })
       }
