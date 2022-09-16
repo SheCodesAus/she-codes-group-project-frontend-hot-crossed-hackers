@@ -12,9 +12,8 @@ function AccountPage() {
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
             .then(res => res.json())
-            .then(data => { setUserData(data); console.log(data) ; setUserFavoriteData(data.favorites) })
+            .then(data => { setUserData(data) ; setUserFavoriteData(data.favorites) })
     }, [username])
-
 
 
     return (
@@ -23,16 +22,18 @@ function AccountPage() {
             <h3>Your Saved Favorites:</h3> 
                     
                     {userFavoriteData[0] ?
-                    <div>
-                        {userFavoriteData.map((favoriteData, index) => {
-                            return (
-                            <ul index={index}>
-                                <h3 >{favoriteData}</h3>
-                            </ul>
-                            )
-                        })}
-                        </div>
+
+                            <div>
+                            {userFavoriteData.map((favoriteData, index) => {
+                                return (
+                                <ul index={index}>
+                                    <FavoriteCard favoriteData={favoriteData} />
+                                </ul>
+                                )
+                            })}
+                            </div>
                         : 'No Favorite Scholarships yet, save the first!'}  
+
 
 
             <div id="project-page-container-bottom">
