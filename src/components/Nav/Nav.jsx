@@ -10,6 +10,7 @@ const Nav = () => {
     const [loggedIn, setLoggedIn] = useState(!!window.localStorage.getItem('token'));
     const logOut = () => {
         window.localStorage.removeItem("token");
+        window.localStorage.removeItem("username");
         setLoggedIn(false)
     }
 
