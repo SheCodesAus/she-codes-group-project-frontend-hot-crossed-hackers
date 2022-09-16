@@ -22,7 +22,7 @@ function HomePage() {
     <div className="main-background">
       <Hero />
       <div class="h1-featured-g">
-        <h1>Featured Grants</h1>
+        <h1>Featured Scholarships</h1>
       </div>
       <div id="grant-list">
         {grantList.map((grantData, index) => {
