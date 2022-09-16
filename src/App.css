@@ -53,12 +53,10 @@
   height: 200px;
 }
 
-
 .user-info-titles {
   color: #091938;
-} */
-
-#user-title{
+}
+*/ #user-title {
   padding-top: 2em;
   padding-bottom: 3rem;
 }
@@ -95,7 +93,7 @@ form {
 .form-item textarea,
 .form-item button {
   border: 2px solid #9c9b95;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 5px;
   font-size: 18px;
 }
@@ -103,9 +101,53 @@ form {
 .form-item button:hover {
   border: 2px solid #707192;
   background-color: #8793ad;
-  color: #FFF;
+  color: #fff;
 }
 
 .form-item button {
   width: 100px;
 }
+/* media queries start */
+/* smartphone view: 1 tile */
+@media screen and (max-width: 480px) {
+  #grant-list {
+    display: block;
+    width: 100%;
+    padding-bottom: 25%;
+    position: relative;
+  }
+
+  #story-list {
+    display: block;
+    width: 100%;
+    padding-bottom: 25%;
+    position: relative;
+  }
+
+  #h1-home {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .h1-featured-g {
+    margin-top: 60%;
+    text-align: center;
+  }
+}
+
+/* tablet view */
+
+@media screen and (max-width: 930px) {
+  #filter-by-text {
+    margin-top: 25%;
+  }
+  #grant-list {
+    display: block;
+    width: 90%;
+    padding-bottom: 25%;
+    margin-left: 5%;
+    position: relative;
+  }
+}
+/* media queries end */

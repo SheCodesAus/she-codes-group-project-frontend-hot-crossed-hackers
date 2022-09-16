@@ -89,7 +89,7 @@ export default function GrantsPage() {
         <LoadingSpinner />
       ) : (
         <div>
-          <h1>Filter by:</h1>
+          <h1 id="filter-by-text">Filter by:</h1>
           <div id="filters">
             <FilterGender setSelectedGender={setSelectedGender} />
             <FilterIncome setSelectedIncome={setSelectedIncome} />
