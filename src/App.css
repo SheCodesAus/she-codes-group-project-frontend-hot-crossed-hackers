@@ -52,3 +52,14 @@
 .grantspage {
   height: 200px;
 }
+
+
+.user-info-titles {
+  color: #091938;
+} */
+
+#user-title{
+  padding-top: 2em;
+  padding-bottom: 3rem;
+}
+
