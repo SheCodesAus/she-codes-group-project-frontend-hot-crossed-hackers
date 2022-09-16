@@ -21,7 +21,7 @@ function LoginForm() {
     const handleChange = event => {
         const { id, value } = event.target;
         setCredentials({ ...credentials, [id]: value });
-      };
+    };
 
 
     const postData = async () => {
@@ -48,14 +48,16 @@ function LoginForm() {
                         window.localStorage.setItem('token', data.token);
                         console.log(data.status)
                         localStorage.setItem('username', credentials.username);
-                        console.log('logged in', localStorage.getItem('username', "id"));
+                        console.log('logged in', localStorage.getItem('username'));
                         navigate("/users/:id");
                     }
                     else {
+                        alert("Username or Password is incorrect. Please try again.")
                         console.log("log-in failed")
                     }
                 })
                 .catch(err => {
+                    
                     console.log(err);
                 })
         }
@@ -75,7 +77,7 @@ function LoginForm() {
                     className="username"
                     placeholder="Enter username"
                     onChange={handleChange}
-                
+
                 />
             </div>
             <div>

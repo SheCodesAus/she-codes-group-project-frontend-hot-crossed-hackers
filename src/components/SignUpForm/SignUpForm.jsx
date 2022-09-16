@@ -39,8 +39,7 @@ const handleSubmit = (e) => {
     e.preventDefault();
     if (credentials.username && credentials.password && credentials.email) {
         postData().then((response) => {
-            window.localStorage.setItem('token', response.token);
-            console.log("signup response data: ... ", credentials)
+            console.log("signup response data: ... ", credentials.username)
             navigate("/login");
         });
         

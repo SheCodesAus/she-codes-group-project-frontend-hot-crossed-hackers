@@ -53,6 +53,14 @@
   height: 200px;
 }
 
+.user-info-titles {
+  color: #091938;
+}
+*/ #user-title {
+  padding-top: 2em;
+  padding-bottom: 3rem;
+}
+
 /* media queries start */
 /* smartphone view: 1 tile */
 @media screen and (max-width: 480px) {
