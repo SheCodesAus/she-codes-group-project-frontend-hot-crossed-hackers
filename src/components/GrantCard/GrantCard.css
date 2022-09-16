@@ -98,8 +98,8 @@ a {
   }
 }
 
-/* tablet */
-@media screen and (max-width: 992px) {
+/* tablet view*/
+@media screen and (min-width: 481px) and (max-width: 930px) {
   .grant-card {
     flex: 50%;
   }
