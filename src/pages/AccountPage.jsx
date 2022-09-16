@@ -14,12 +14,17 @@ function AccountPage() {
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
             .then(res => res.json())
-            .then(data => { setUserData(data) ; setUserFavoriteData(data.favorites) })
+            .then(data => { 
+                if(username === data.username){
+                    setUserData(data) ; setUserFavoriteData(data.favorites) }})
+            .catch(err => {console.log(err)})
     }, [username])
 
 
+if(window.localStorage.getItem('token')){
     return (
-        <div>
+
+            <div>
             <h1 id="user-title">Welcome, {userData.username}</h1>
 
             <p>Complete our "About You" quiz: we will get our specialist in touch with you, sourcing you the very best Scholarships!</p>
@@ -53,8 +58,10 @@ function AccountPage() {
             <div>
                 <Link className="button" to="/grants">View More Scholarships</Link>
             </div>
+
         </div>
-    )
+    )} 
+    else { return <div><p>No data for you!</p><br></br><Link className="button" to="/login">Please Log in</Link><br></br></div>}
 }
 
 export default AccountPage;
