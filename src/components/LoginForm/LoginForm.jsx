@@ -46,7 +46,7 @@ function LoginForm() {
                         console.log(data.status)
                         localStorage.setItem('username', credentials.username);
                         console.log('logged in', localStorage.getItem('username'));
-                        navigate("/account");
+                        navigate("/");
                     }
                     else {
                         console.log("log-in failed")
