@@ -56,10 +56,14 @@ function GrantDetails(props) {
         <img id="details-image" src={grantData.image} alt="grant" />
         <p id="main-title">{grantData.title}</p>
         <ul>
-        <li>Organisation: {grantData.organisation}</li> <br></br>
-        <li>Description: {grantData.description}</li>
+        <a>Organisation: {grantData.organisation}</a> 
         <br></br>
-        <li>Eligibility: {grantData.eligibility}</li>
+        <br></br>
+        <a>Description: {grantData.description}</a>
+        <br></br>
+        <br></br>
+        <a>Eligibility: {grantData.eligibility}</a>
+        <br></br>
         <br></br>
 
 <div className="container-url">
