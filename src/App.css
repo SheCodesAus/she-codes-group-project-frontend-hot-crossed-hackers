@@ -68,7 +68,8 @@ h3 {
 .user-info-titles {
   color: #091938;
 }
-*/ #user-title {
+
+#user-title {
   padding-top: 2em;
   padding-bottom: 3rem;
 }
