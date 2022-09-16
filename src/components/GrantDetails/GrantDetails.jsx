@@ -66,7 +66,7 @@ function GrantDetails(props) {
 <div>
         {window.localStorage.getItem('token') ?
         <a href={grantData.url}>
-            <button id="apply-button">Click Here To Find Out More!</button>
+            <button className="save-btn">Click Here To Find Out More!</button>
         </a> : <Link to="/signup">Sign Up to Apply!</Link>}
 
 </div>
