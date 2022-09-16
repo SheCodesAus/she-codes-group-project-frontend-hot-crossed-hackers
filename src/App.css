@@ -61,7 +61,7 @@
   padding-bottom: 3rem;
 }
 
-form {
+/* form {
   margin: 50px auto;
   width: 90%;
 }
@@ -106,7 +106,71 @@ form {
 
 .form-item button {
   width: 100px;
+} */
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
 }
+
+p {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(33, 33, 33);
+}
+
+input,
+label {
+  display: block;
+}
+
+
+h2 {
+  font-size: 1.5em;
+  color: #1a1a1a;
+}
+
+.username,
+.message,
+.email {
+  background: #ffffff;
+  border: #ccc 1px solid;
+  padding: 10px;
+  width: 350px;
+  font-size: 1em;
+  margin: 10px;
+}
+
+.btn {
+  background: #091938;
+  width: 370px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: white;
+  border: #091938 1px solid;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  align-items: left;
+  font-weight: 800;
+  font-size: 0.8em;
+}
+
+.btn:hover {
+  background: #0d2d6c;
+}
+
+.form-box {
+  width: 400px;
+  border-radius: 6px;
+  margin: 0 auto 0 auto;
+  margin-bottom: 360px;
+  padding: 40px 0px 40px 0px;
+}
+
 /* media queries start */
 /* smartphone view: 1 tile */
 @media screen and (max-width: 480px) {

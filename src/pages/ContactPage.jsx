@@ -7,22 +7,39 @@ function ContactPage() {
                 <a id="Contact"></a>
         <h1 class="section-title">Connect</h1>
         <h1 class="sub-section-title">Reach out for all enquiries!</h1>
-        <form action="https://formspree.io/f/xzbojbvy" method="post">
+        <form className="form-box" action="https://formspree.io/f/xzbojbvy" method="post">
 
-                <div class="form-item">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name"/>
-                </div>
-                <div class="form-item">
-                    <label for="mail">Email</label>
-                    <input type="email" id="mail" name="email"/>
-                </div>
-                <div class="form-item">
-                    <label for="message"> Message</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
-                <div class="form-item">
-                    <button type="submit">Send</button>
+<div>
+                <input
+                    type="text"
+                    id="username"
+                    className="username"
+                    placeholder="Enter username"
+                    name="username"
+                />
+            </div>
+            <div>
+                <input
+                    type="email"
+                    id="email"
+                    className="email"
+                    placeholder="Email"
+                    name="email"
+                />
+            </div>
+            <div>
+                <input
+                    type="message"
+                    id="message"
+                    className="message"
+                    placeholder="Message"
+                    name="message"
+
+                />
+            </div>
+
+                <div >
+                    <button type="submit" className="btn">Send</button>
                 </div>
             </form>
 
