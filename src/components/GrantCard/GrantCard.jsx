@@ -8,15 +8,12 @@ function GrantCard(props) {
     const navigate = useNavigate();
 
     const username = window.localStorage.getItem("username")
-    // const [userData, setUserData] = useState( {favorites: []});
-    // const [savebutton, setSaveButton ] = useState(!!userData.favorites.includes(grantData.id))
-    // const [savebutton, setSaveButton ] = useState(false)
-
+    const [userData, setUserData] = useState( {favorites: []});
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
             .then(res => res.json())
-            .then(data => { console.log(data) })
+            .then(data => { console.log(data); setUserData(data) })
     }, [username])
 
     const handleSave = (e) => {
@@ -54,36 +51,29 @@ function GrantCard(props) {
         }
     };
 
-    // if(grantData.favorites[0]) {
-    //     if(grantData.favorites.includes(grantData.id)){
-    //         setSaveButton(true)
-    //     }
-    // }
-
     return (
         <div className="grant-card">
             <Link to={`/grant/${grantData.id}`}>  <img src={grantData.image} className='w-100 hover-shadow' alt="grant" /></Link>
             <h3 className="grant-title">{grantData.title}</h3>
 
             <h4 className="date"> Closing date: {new Date(grantData.closing_date).toDateString()}</h4>
-            {/* <h4 className="description" >{grantData.description}</h4> */}
-            {/* <div className ="card-CTA"> */}
 
             <Link to={`/grant/${grantData.id}`}>
                 <h4 className="see-more-btn">
                     See more
                 </h4>
             </Link>
-            {/* {savebutton ? 
-            <button onClick={handleDelete} className="save-btn" >UNSAVE</button>
-            : <button onClick={handleSave} className="save-btn" >SAVE</button>} */}
 
-            {/* {savebutton ? <button onClick={handleDelete} className="save-btn" >UNSAVE</button> :
-            <button onClick={handleSave} className="save-btn" >SAVE</button>} */}
-            {/* {userData.favorites.includes(grantData.id)? */}
-            <button onClick={handleDelete} className="save-btn" >UNSAVE</button>
-            <button onClick={handleSave} className="save-btn" >SAVE</button>
 
+{userData.favorites.includes(grantData.id) ? (
+        <button onClick={handleDelete} className="save-btn">
+        UNSAVE
+        </button>
+) : (
+        <button onClick={handleSave} className="save-btn">
+        SAVE
+        </button>
+)}
         </div >
 
 
