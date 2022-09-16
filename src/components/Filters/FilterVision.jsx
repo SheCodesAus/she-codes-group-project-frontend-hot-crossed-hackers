@@ -19,7 +19,6 @@ export default function FilterVision(props) {
           </option>
           <option value="AN">Any</option>
           <option value="YE">Yes</option>
-          {/* <option value="NO">No</option> */}
         </select>
       </div>
     </div>

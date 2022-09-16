@@ -80,7 +80,6 @@ nav {
     padding: 10px;
     left: 0;
     top: 75px;
-    /* transition: all 0.5s ease-out; */
     width: 100%;
     font-size: 18px;
   }
@@ -92,7 +91,6 @@ nav {
     text-align: center;
     padding: 10px;
     width: 100%;
-    /* transition: all 0.5s ease; */
     display: table;
     font-size: 16px;
   }
@@ -119,7 +117,6 @@ nav {
   nav {
     color: #ffffff;
     background-color: #091938;
-    /* background-image: linear-gradient(to bottom right, #091938, #1044ad); */
     text-decoration: none;
     display: flex;
     justify-content: space-around;
@@ -155,7 +152,6 @@ nav {
     padding: 10px;
     left: 0;
     top: 75px;
-    /* transition: all 0.5s ease-out; */
     width: 100%;
     font-size: 18px;
   }
@@ -167,7 +163,6 @@ nav {
     text-align: center;
     padding: 10px;
     width: 100%;
-    /* transition: all 0.5s ease; */
     display: table;
     font-size: 16px;
   }
@@ -194,7 +189,6 @@ nav {
   nav {
     color: #ffffff;
     background-color: #091938;
-    /* background-image: linear-gradient(to bottom right, #091938, #1044ad); */
     text-decoration: none;
     display: flex;
     justify-content: space-around;

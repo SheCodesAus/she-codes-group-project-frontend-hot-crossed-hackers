@@ -4,7 +4,6 @@
 }
 
 .grant-card:hover {
-  /* transform: scale(1.05); */
   box-shadow: rgba(0, 0, 0, 0.1) 2px 8px 16px;
 }
 
@@ -45,7 +44,6 @@ a {
 }
 
 .see-more-btn {
-  /* text-decoration: none; */
   text-align: left;
   padding: 0px 32px 0px 32px;
   color: #091938;
@@ -105,8 +103,3 @@ a {
   }
 }
 /* media queries end */
-
-/* 
-.card-CTA{
-
-} */

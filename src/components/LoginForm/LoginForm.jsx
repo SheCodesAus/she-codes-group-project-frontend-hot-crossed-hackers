@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import "./LoginForm.css";
 
@@ -11,13 +10,6 @@ function LoginForm() {
         password: "",
     });
 
-    // const handleChange = (event) => {
-    //     const { id, value } = event.target;
-    //     setCredentials((prevCredentials) => ({
-    //         ...prevCredentials,
-    //         [id]: value,
-    //     }));
-    // };
     const handleChange = event => {
         const { id, value } = event.target;
         setCredentials({ ...credentials, [id]: value });

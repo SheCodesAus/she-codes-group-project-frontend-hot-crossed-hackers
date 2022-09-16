@@ -31,6 +31,7 @@
     padding: 12px 48px 12px 166px;
     margin: 0;
     text-align: left;
+  display: flex;
 }
 
 .singUp-button {

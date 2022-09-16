@@ -48,7 +48,6 @@ img {
 @media screen and (max-width: 480px) {
   .details-container {
     width: 100%;
-    /* margin-left: 15%; */
     align-items: center;
     margin-top: 10%;
     padding: 0%;
