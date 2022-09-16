@@ -8,7 +8,7 @@ function GrantCard(props) {
     const navigate = useNavigate();
 
     const username = window.localStorage.getItem("username")
-    const [userData, setUserData] = useState("");
+    // const [userData, setUserData] = useState( {favorites: []});
     // const [savebutton, setSaveButton ] = useState(!!userData.favorites.includes(grantData.id))
     // const [savebutton, setSaveButton ] = useState(false)
 
@@ -16,7 +16,7 @@ function GrantCard(props) {
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
             .then(res => res.json())
-            .then(data => { setUserData(data); console.log(data) })
+            .then(data => { console.log(data) })
     }, [username])
 
     const handleSave = (e) => {
@@ -80,8 +80,9 @@ function GrantCard(props) {
 
             {/* {savebutton ? <button onClick={handleDelete} className="save-btn" >UNSAVE</button> :
             <button onClick={handleSave} className="save-btn" >SAVE</button>} */}
+            {/* {userData.favorites.includes(grantData.id)? */}
             <button onClick={handleDelete} className="save-btn" >UNSAVE</button>
-             <button onClick={handleSave} className="save-btn" >SAVE</button>
+            <button onClick={handleSave} className="save-btn" >SAVE</button>
 
         </div >
 
