@@ -52,10 +52,12 @@ function LoginForm() {
                         navigate("/users/:id");
                     }
                     else {
+                        alert("Username or Password is incorrect. Please try again.")
                         console.log("log-in failed")
                     }
                 })
                 .catch(err => {
+                    
                     console.log(err);
                 })
         }
