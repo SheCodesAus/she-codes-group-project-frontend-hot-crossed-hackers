@@ -28,7 +28,7 @@ img {
 /* media queries start */
 
 /* smartphone view: 1 tile */
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 580px) {
   .details-container {
     width: 80%;
     margin-left: 15%;
