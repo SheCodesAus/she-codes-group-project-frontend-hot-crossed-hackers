@@ -6,8 +6,7 @@ function GrantDetails(props) {
 
   return (
     <div className="details-container">
-
-      <img id="single-pic-grant-page" src={grantData.image} alt="grant" />
+      <img id="details-image" src={grantData.image} alt="grant" />
       <p id="main-title">{grantData.title}</p>
       <ul>
         <li>Organisation: {grantData.organisation}</li> <br></br>
