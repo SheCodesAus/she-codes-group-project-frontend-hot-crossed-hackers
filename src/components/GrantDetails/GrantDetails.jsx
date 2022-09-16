@@ -3,59 +3,59 @@ import "./GrantDetails.css";
 import { Link,  useNavigate  } from "react-router-dom";
 
 function GrantDetails(props) {
-  const { grantData } = props;
-  const token = window.localStorage.getItem("token")
-  const navigate = useNavigate();
+    const { grantData } = props;
+    const token = window.localStorage.getItem("token")
+    const navigate = useNavigate();
 
-  const username = window.localStorage.getItem("username")
-  const [userData, setUserData] = useState( {favorites: []});
+    const username = window.localStorage.getItem("username")
+    const [userData, setUserData] = useState( {favorites: []});
 
-  useEffect(() => {
-      fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
-          .then(res => res.json())
-          .then(data => { console.log(data) ;setUserData(data) })
-  }, [username])
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
+            .then(res => res.json())
+            .then(data => { console.log(data) ;setUserData(data) })
+    }, [username])
 
-  const handleSave = (e) => {
-      {
-          fetch(
-              `${process.env.REACT_APP_API_URL}scholarships/favorites/${grantData.id}/`, {
-              method: "post",
-              headers: {
-                  'Authorization': `Token ${token}`,
-                  "Content-Type": "application/json"
-              }
-              
-          })
-              .then(res => {
-                  if (res.ok) { console.log("HTTP request successful"); navigate("/grants") }
-                  else { console.log("HTTP request unsuccessful") }
-              })
-      }
-  };
+    const handleSave = (e) => {
+        {
+            fetch(
+                `${process.env.REACT_APP_API_URL}scholarships/favorites/${grantData.id}/`, {
+                method: "post",
+                headers: {
+                    'Authorization': `Token ${token}`,
+                    "Content-Type": "application/json"
+                }
+                
+            })
+                .then(res => {
+                    if (res.ok) { console.log("HTTP request successful"); navigate("/grants") }
+                    else { console.log("HTTP request unsuccessful") }
+                })
+        }
+    };
 
-  const handleDelete = (e) => {
-      {
-          fetch(
-              `${process.env.REACT_APP_API_URL}scholarships/favorites/${grantData.id}/`, {
-              method: "delete",
-              headers: {
-                  'Authorization': `Token ${token}`,
-                  "Content-Type": "application/json"
-              }
-          })
-              .then(res => {
-                  if (res.ok) { console.log("HTTP request successful"); navigate("/grants") }
-                  else { console.log("HTTP request unsuccessful") }
-              })
-      }
-  };
+    const handleDelete = (e) => {
+        {
+            fetch(
+                `${process.env.REACT_APP_API_URL}scholarships/favorites/${grantData.id}/`, {
+                method: "delete",
+                headers: {
+                    'Authorization': `Token ${token}`,
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(res => {
+                    if (res.ok) { console.log("HTTP request successful"); navigate("/grants") }
+                    else { console.log("HTTP request unsuccessful") }
+                })
+        }
+    };
 
-  return (
+    return (
     <div className="details-container">
-      <img id="details-image" src={grantData.image} alt="grant" />
-      <p id="main-title">{grantData.title}</p>
-      <ul>
+        <img id="details-image" src={grantData.image} alt="grant" />
+        <p id="main-title">{grantData.title}</p>
+        <ul>
         <li>Organisation: {grantData.organisation}</li> <br></br>
         <li>Description: {grantData.description}</li>
         <br></br>
@@ -64,8 +64,8 @@ function GrantDetails(props) {
 
         {window.localStorage.getItem('token') ?
         <a href={grantData.url}>
-          <button id="apply-button">Click Here To Find Out More!</button>
-        </a> : <Link to="/signup">Sign Up to Apply!</Link>}
+            <button id="apply-button">Click Here To Find Out More!</button>
+        </a> : <Link to="signup">Sign Up to Apply!</Link>}
 
         {window.localStorage.getItem('token') ?
 <div>
@@ -82,9 +82,9 @@ function GrantDetails(props) {
 </div>
 : null}
         <br></br>
-      </ul>
+        </ul>
     </div>
-  );
+    );
 }
 
 export default GrantDetails;
